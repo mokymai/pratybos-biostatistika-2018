@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Biostatistikos pratybos</title>
+  <meta name="description" content="Biostatistikos pratybos">
+  <meta name="generator" content="bookdown 0.7.12 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Biostatistikos pratybos" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Biostatistikos pratybos" />
+  
+  
+  
+
+<meta name="author" content="Vilmantas Gėgžna">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="labai-svarbu.html">
+<link rel="next" href="duomenu-isikelimas.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<link href="libs/font-awesome-5.0.12/css/fontawesome-all.min.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.2.1/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.7.1.9000/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/plotlyjs-1.37.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotlyjs-1.37.1/plotly-latest.min.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.4/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="libs/dt-plugin-searchhighlight-1.10.16/dataTables.searchHighlight.css" rel="stylesheet" />
+<script src="libs/dt-plugin-searchhighlight-1.10.16/dataTables.searchHighlight.min.js"></script>
+<script src="libs/dt-plugin-searchhighlight-1.10.16/jquery.highlight.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="kbd.css" type="text/css" />
+  <link rel="icon" href="fig/icons/favicon.png" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="../index.html"><b>Pagrindinis</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pradžia</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#apie-sia-knyga"><i class="fa fa-check"></i>Apie šią knygą</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pastabos"><i class="fa fa-check"></i>Pastabos</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#zymejimu-reiksmes"><i class="fa fa-check"></i>Žymėjimų reikšmės</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="labai-svarbu.html"><a href="labai-svarbu.html"><i class="fa fa-check"></i>Labai svarbu</a><ul>
+<li><a href="labai-svarbu.html#labai-svarbu-1"><font color="red">Labai svarbu (1)</font></a></li>
+<li><a href="labai-svarbu.html#labai-svarbu-2"><font color="red">Labai svarbu (2)</font></a></li>
+<li><a href="labai-svarbu.html#labai-svarbu-3"><font color="red">Labai svarbu (3)</font></a></li>
+<li><a href="labai-svarbu.html#labai-svarbu-4"><font color="red">Labai svarbu (4)</font></a></li>
+<li><a href="labai-svarbu.html#labai-svarbu-5"><font color="red">Labai svarbu (5)</font></a></li>
+<li><a href="labai-svarbu.html#labai-svarbu-6"><font color="red">Labai svarbu (6)</font></a></li>
+<li><a href="labai-svarbu.html#labai-svarbu-7"><font color="red">Labai svarbu (7)</font></a></li>
+<li><a href="labai-svarbu.html#labai-svarbu-8"><font color="red">Labai svarbu (8)</font></a></li>
+<li><a href="labai-svarbu.html#labai-svarbu-9"><font color="red">Labai svarbu (9)</font></a></li>
+<li><a href="labai-svarbu.html#labai-svarbu-10"><font color="red">Labai svarbu (10)</font></a></li>
+<li><a href="labai-svarbu.html#labai-svarbu-11"><font color="red">Labai svarbu (11)</font></a></li>
+<li><a href="labai-svarbu.html#labai-svarbu-12"><font color="red">Labai svarbu (12)</font></a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="ivadas.html"><a href="ivadas.html"><i class="fa fa-check"></i><b>1</b> Įvadas</a><ul>
+<li class="chapter" data-level="1.1" data-path="ivadas.html"><a href="ivadas.html#analizes-ivadas"><i class="fa fa-check"></i><b>1.1</b> Duomenų analizės pagrindai</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="ivadas.html"><a href="ivadas.html#statistikos-mokslas-ir-jo-dalys"><i class="fa fa-check"></i><b>1.1.1</b> Statistikos mokslas ir jo dalys</a></li>
+<li class="chapter" data-level="1.1.2" data-path="ivadas.html"><a href="ivadas.html#generaline-aibe-imtis-ir-duomenys"><i class="fa fa-check"></i><b>1.1.2</b> Generalinė aibė, imtis ir duomenys</a></li>
+<li class="chapter" data-level="1.1.3" data-path="ivadas.html"><a href="ivadas.html#statistinio-tyrimo-ciklas"><i class="fa fa-check"></i><b>1.1.3</b> Statistinio tyrimo ciklas</a></li>
+<li class="chapter" data-level="1.1.4" data-path="ivadas.html"><a href="ivadas.html#o-koks-sakete-klausimas"><i class="fa fa-check"></i><b>1.1.4</b> O koks, sakėte, klausimas?</a></li>
+<li class="chapter" data-level="1.1.5" data-path="ivadas.html"><a href="ivadas.html#statistinio-tyrimo-eiga"><i class="fa fa-check"></i><b>1.1.5</b> Statistinio tyrimo eiga</a></li>
+<li class="chapter" data-level="1.1.6" data-path="ivadas.html"><a href="ivadas.html#kintamuju-tipai"><i class="fa fa-check"></i><b>1.1.6</b> Kintamųjų tipai</a><ul>
+<li class="chapter" data-level="" data-path="ivadas.html"><a href="ivadas.html#veiksmai-su-kintamaisiais"><i class="fa fa-check"></i>Kokius veiksmus galima atlikti su skirtingų tipų kintamųjų reikšmėmis?</a></li>
+<li class="chapter" data-level="" data-path="ivadas.html"><a href="ivadas.html#apsimeteteliai"><i class="fa fa-check"></i>Kokie kintamieji atrodo kaip skaitiniai (kiekybiniai), bet iš tiesų yra kategoriniai?</a></li>
+</ul></li>
+<li class="chapter" data-level="1.1.7" data-path="ivadas.html"><a href="ivadas.html#duomenu-saugojimo-formos"><i class="fa fa-check"></i><b>1.1.7</b> Duomenų saugojimo formos</a></li>
+<li class="chapter" data-level="1.1.8" data-path="ivadas.html"><a href="ivadas.html#duomenu-eilutes"><i class="fa fa-check"></i><b>1.1.8</b> Duomenų eilutės</a></li>
+<li class="chapter" data-level="1.1.9" data-path="ivadas.html"><a href="ivadas.html#duomenu-lenteles"><i class="fa fa-check"></i><b>1.1.9</b> Duomenų lentelės</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="ivadas.html"><a href="ivadas.html#r-ivadas"><i class="fa fa-check"></i><b>1.2</b> Programos <em>R</em> pradmenys</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="ivadas.html"><a href="ivadas.html#apie-r"><i class="fa fa-check"></i><b>1.2.1</b> Apie programą <em>R</em></a></li>
+<li class="chapter" data-level="1.2.2" data-path="ivadas.html"><a href="ivadas.html#programos-rstudio-langai"><i class="fa fa-check"></i><b>1.2.2</b> Programos <em>RStudio</em> langai</a></li>
+<li class="chapter" data-level="1.2.3" data-path="ivadas.html"><a href="ivadas.html#pagrindiniai-r-kodo-sintakses-elementai"><i class="fa fa-check"></i><b>1.2.3</b> Pagrindiniai <em>R</em> kodo sintaksės elementai</a><ul>
+<li><a href="ivadas.html#r-kodo-komentarai"><em>R</em> kodo komentarai (#)</a></li>
+<li class="chapter" data-level="" data-path="ivadas.html"><a href="ivadas.html#rezultatu-zenklinimas"><i class="fa fa-check"></i>Rezultatų ženklinimas (##)</a></li>
+<li><a href="ivadas.html#elementu-eiles-numeriu-zymejimas">Elementų eilės numerių žymėjimas: <strong>[ ]</strong></a></li>
+<li><a href="ivadas.html#r-funkcijos-ir-ju-argumentai"><em>R</em> funkcijos ir jų argumentai</a></li>
+<li class="chapter" data-level="" data-path="ivadas.html"><a href="ivadas.html#kitu-elementu-spalvinis-zymejimas"><i class="fa fa-check"></i>Kitų elementų spalvinis žymėjimas</a></li>
+<li class="chapter" data-level="" data-path="ivadas.html"><a href="ivadas.html#programos-kodas-blokais-ir-tekste"><i class="fa fa-check"></i>Programos kodas: blokais ir tekste</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2.4" data-path="ivadas.html"><a href="ivadas.html#r-objektai"><i class="fa fa-check"></i><b>1.2.4</b> R objektai</a><ul>
+<li class="chapter" data-level="" data-path="ivadas.html"><a href="ivadas.html#objektu-sukurimas"><i class="fa fa-check"></i>Objektų sukūrimas</a></li>
+<li class="chapter" data-level="" data-path="ivadas.html"><a href="ivadas.html#apie-objektu-pavadinimus"><i class="fa fa-check"></i>Apie objektų pavadinimus</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2.5" data-path="ivadas.html"><a href="ivadas.html#atomines-r-duomenu-klases"><i class="fa fa-check"></i><b>1.2.5</b> Atominės <em>R</em> duomenų klasės</a><ul>
+<li><a href="ivadas.html#klase-character"><strong>1. Klasė „character“ </strong></a></li>
+<li><a href="ivadas.html#klase-numeric"><strong>2. Klasė „numeric“ </strong></a></li>
+<li><a href="ivadas.html#klase-integer"><strong>3. Klasė „integer“ </strong></a></li>
+<li><a href="ivadas.html#klase-complex"><strong>4. Klasė „complex“ </strong></a></li>
+<li><a href="ivadas.html#klase-logical"><strong>5. Klasė „logical“ </strong></a></li>
+<li><a href="ivadas.html#klase-raw"><strong>6. Klasė „raw“ </strong></a></li>
+</ul></li>
+<li class="chapter" data-level="1.2.6" data-path="ivadas.html"><a href="ivadas.html#r-duomenu-strukturos"><i class="fa fa-check"></i><b>1.2.6</b> <em>R</em> duomenų struktūros</a></li>
+<li class="chapter" data-level="1.2.7" data-path="ivadas.html"><a href="ivadas.html#r-vektoriaus-kurimas"><i class="fa fa-check"></i><b>1.2.7</b> <em>R</em> vektoriaus kūrimas</a></li>
+<li class="chapter" data-level="1.2.8" data-path="ivadas.html"><a href="ivadas.html#r-kaip-kalkuliatorius"><i class="fa fa-check"></i><b>1.2.8</b> <em>R</em> kaip kalkuliatorius: operatoriai ir komandos</a></li>
+<li class="chapter" data-level="1.2.9" data-path="ivadas.html"><a href="ivadas.html#specialieji-simboliai"><i class="fa fa-check"></i><b>1.2.9</b> Specialieji simboliai</a></li>
+<li class="chapter" data-level="1.2.10" data-path="ivadas.html"><a href="ivadas.html#skaiciu-seku-kurimas"><i class="fa fa-check"></i><b>1.2.10</b> Skaičių sekų kūrimas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html"><i class="fa fa-check"></i><b>2</b> Duomenų įsikėlimas į <strong><em>R</em></strong></a><ul>
+<li class="chapter" data-level="2.1" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#pasirengimas-duomenu-analizei"><i class="fa fa-check"></i><b>2.1</b> Pasirengimas duomenų analizei</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#rstudio-projektai"><i class="fa fa-check"></i><b>2.1.1</b> <em>RStudio</em> projektai</a></li>
+<li class="chapter" data-level="2.1.2" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#lokales-ir-utf-8-standarto-nustatymas"><i class="fa fa-check"></i><b>2.1.2</b> Lokalės ir UTF-8 standarto nustatymas</a></li>
+<li class="chapter" data-level="2.1.3" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#r-paketu-uzkrovimas"><i class="fa fa-check"></i><b>2.1.3</b> <em>R</em> paketų užkrovimas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#duomenu-nuskaitymas"><i class="fa fa-check"></i><b>2.2</b> Duomenų nuskaitymas</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#r-objektu-pavadinimai"><i class="fa fa-check"></i><b>2.2.1</b> „R“ objektų pavadinimai</a></li>
+<li class="chapter" data-level="2.2.2" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#programos-r-formatais-issaugotu-duomenu-nuskaitymas"><i class="fa fa-check"></i><b>2.2.2</b> Programos <em>R</em> formatais išsaugotų duomenų nuskaitymas</a></li>
+<li class="chapter" data-level="2.2.3" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#duomenu-uzkrovimas-is-r-paketu"><i class="fa fa-check"></i><b>2.2.3</b> Duomenų užkrovimas iš <em>R</em> paketų</a></li>
+<li class="chapter" data-level="2.2.4" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#rdata-formato-bylu-nuskaitymas"><i class="fa fa-check"></i><b>2.2.4</b> <em>.RData</em> formato bylų nuskaitymas</a></li>
+<li class="chapter" data-level="2.2.5" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#rds-formato-bylu-nuskaitymas"><i class="fa fa-check"></i><b>2.2.5</b> <em>.Rds</em> formato bylų nuskaitymas</a></li>
+<li class="chapter" data-level="2.2.6" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#tekstinio-skirtukais-atskirtu-reiksmiu-formato-nuskaitymas"><i class="fa fa-check"></i><b>2.2.6</b> Tekstinio skirtukais atskirtų reikšmių formato nuskaitymas</a></li>
+<li class="chapter" data-level="2.2.7" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#funkcija-fread"><i class="fa fa-check"></i><b>2.2.7</b> Funkcija <strong><em>fread()</em></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#duomenu-lenteles-perziura"><i class="fa fa-check"></i><b>2.3</b> Duomenų lentelės peržiūra</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#duomenys-kuriuos-naudosime"><i class="fa fa-check"></i><b>2.3.1</b> Duomenys, kuriuos naudosime</a></li>
+<li class="chapter" data-level="2.3.2" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#pagrindines-perziuros-funkcijos"><i class="fa fa-check"></i><b>2.3.2</b> Pagrindinės peržiūros funkcijos</a></li>
+<li class="chapter" data-level="2.3.3" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#kaip-atpazinti-stulpeliuose-esanciu-duomenu-klases"><i class="fa fa-check"></i><b>2.3.3</b> Kaip atpažinti stulpeliuose esančių duomenų klases?</a></li>
+<li class="chapter" data-level="2.3.4" data-path="duomenu-isikelimas.html"><a href="duomenu-isikelimas.html#teorinis-duomenu-tipas-ir-jam-tinkama-r-klase"><i class="fa fa-check"></i><b>2.3.4</b> Teorinis duomenų tipas ir jam tinkama <em>R</em> klasė</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="grafikai.html"><a href="grafikai.html"><i class="fa fa-check"></i><b>3</b> Grafinės suvestinės</a><ul>
+<li class="chapter" data-level="3.1" data-path="grafikai.html"><a href="grafikai.html#grafikai-1-teorija"><i class="fa fa-check"></i><b>3.1</b> Teorinė dalis</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="grafikai.html"><a href="grafikai.html#grafikai-vieno-kintamojo-apibendrinimui"><i class="fa fa-check"></i><b>3.1.1</b> Grafikai vieno kintamojo apibendrinimui</a><ul>
+<li><a href="grafikai.html#kategoriniams-nominaliesiems-ranginiams-ir-diskretiesiems-duomenims"><strong>Kategoriniams nominaliesiems, ranginiams ir diskretiesiems duomenims</strong></a></li>
+<li><a href="grafikai.html#tolydiesiems-duomenims"><strong>Tolydiesiems duomenims</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.2" data-path="grafikai.html"><a href="grafikai.html#diagramu-palyginimas"><i class="fa fa-check"></i><b>3.1.2</b> Diagramų palyginimas</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="grafikai.html"><a href="grafikai.html#ggplot2-ivadas"><i class="fa fa-check"></i><b>3.2</b> Sistema <strong><em>ggplot2</em></strong>: įvadas</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="grafikai.html"><a href="grafikai.html#pasirengimas-darbui"><i class="fa fa-check"></i><b>3.2.1</b> Pasirengimas darbui</a></li>
+<li class="chapter" data-level="3.2.2" data-path="grafikai.html"><a href="grafikai.html#pirmasis-grafikas"><i class="fa fa-check"></i><b>3.2.2</b> Pirmasis grafikas</a></li>
+<li class="chapter" data-level="3.2.3" data-path="grafikai.html"><a href="grafikai.html#kaip-konstruojami-ggplot2-grafikai"><i class="fa fa-check"></i><b>3.2.3</b> Kaip konstruojami „ggplot2“ grafikai?</a></li>
+<li class="chapter" data-level="3.2.4" data-path="grafikai.html"><a href="grafikai.html#funkcija-ggplot"><i class="fa fa-check"></i><b>3.2.4</b> Funkcija <strong><em>ggplot()</em></strong></a></li>
+<li class="chapter" data-level="3.2.5" data-path="grafikai.html"><a href="grafikai.html#geomai-geometrines-figuros"><i class="fa fa-check"></i><b>3.2.5</b> Geomai: geometrinės figūros</a></li>
+<li class="chapter" data-level="3.2.6" data-path="grafikai.html"><a href="grafikai.html#estetika-kintamojo-reiksmiu-isdestymas"><i class="fa fa-check"></i><b>3.2.6</b> Estetika: kintamojo reikšmių išdėstymas</a><ul>
+<li class="chapter" data-level="" data-path="grafikai.html"><a href="grafikai.html#estetiniu-savybiu-rusys"><i class="fa fa-check"></i>Estetinių savybių rūšys</a></li>
+<li class="chapter" data-level="" data-path="grafikai.html"><a href="grafikai.html#kur-nurodoma-kaip-isdestyti-reiksmes"><i class="fa fa-check"></i>Kur nurodoma, kaip išdėstyti reikšmes?</a></li>
+<li><a href="grafikai.html#parametro-group-svarba">Parametro <strong><em>group</em></strong> svarba</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2.7" data-path="grafikai.html"><a href="grafikai.html#estetika-fiksuoto-dydzio-reiksmes-parinkimas"><i class="fa fa-check"></i><b>3.2.7</b> Estetika: fiksuoto dydžio reikšmės parinkimas</a></li>
+<li class="chapter" data-level="3.2.8" data-path="grafikai.html"><a href="grafikai.html#grafikas-tai-r-objektas"><i class="fa fa-check"></i><b>3.2.8</b> Grafikas – tai <em>R</em> objektas</a></li>
+<li class="chapter" data-level="3.2.9" data-path="grafikai.html"><a href="grafikai.html#facetes-subgrafikai"><i class="fa fa-check"></i><b>3.2.9</b> Facetės: subgrafikai</a></li>
+<li class="chapter" data-level="3.2.10" data-path="grafikai.html"><a href="grafikai.html#pavadinimai"><i class="fa fa-check"></i><b>3.2.10</b> Pavadinimai</a></li>
+<li class="chapter" data-level="3.2.11" data-path="grafikai.html"><a href="grafikai.html#temos"><i class="fa fa-check"></i><b>3.2.11</b> Temos</a></li>
+<li class="chapter" data-level="3.2.12" data-path="grafikai.html"><a href="grafikai.html#temos-nustatymas-visiems-grafikams"><i class="fa fa-check"></i><b>3.2.12</b> Temos nustatymas visiems grafikams</a></li>
+<li class="chapter" data-level="3.2.13" data-path="grafikai.html"><a href="grafikai.html#zenklinimai-ir-pazymejimai"><i class="fa fa-check"></i><b>3.2.13</b> Ženklinimai ir pažymėjimai</a></li>
+<li class="chapter" data-level="3.2.14" data-path="grafikai.html"><a href="grafikai.html#statistines-transformacijos"><i class="fa fa-check"></i><b>3.2.14</b> Statistinės transformacijos</a></li>
+<li class="chapter" data-level="3.2.15" data-path="grafikai.html"><a href="grafikai.html#koordinaciu-sistemos"><i class="fa fa-check"></i><b>3.2.15</b> Koordinačių sistemos</a></li>
+<li class="chapter" data-level="3.2.16" data-path="grafikai.html"><a href="grafikai.html#grafiku-issaugojimas"><i class="fa fa-check"></i><b>3.2.16</b> Grafikų išsaugojimas</a></li>
+<li class="chapter" data-level="3.2.17" data-path="grafikai.html"><a href="grafikai.html#ggplot-kodo-sablonas"><i class="fa fa-check"></i><b>3.2.17</b> Šablonas <strong><em>ggplot2</em></strong> grafikui</a></li>
+<li class="chapter" data-level="3.2.18" data-path="grafikai.html"><a href="grafikai.html#ggplotly"><i class="fa fa-check"></i><b>3.2.18</b> Paketas <strong><em>plotly</em></strong> ir interaktyvūs grafikai</a></li>
+<li class="chapter" data-level="3.2.19" data-path="grafikai.html"><a href="grafikai.html#easyplot"><i class="fa fa-check"></i><b>3.2.19</b> Įrankis <strong><em>easyPlot</em></strong></a></li>
+<li class="chapter" data-level="3.2.20" data-path="grafikai.html"><a href="grafikai.html#ggplotgui"><i class="fa fa-check"></i><b>3.2.20</b> Įrankis <strong><em>ggplot GUI</em></strong></a></li>
+<li class="chapter" data-level="3.2.21" data-path="grafikai.html"><a href="grafikai.html#ggedit"><i class="fa fa-check"></i><b>3.2.21</b> Įrankis <strong><em>ggedit</em></strong></a></li>
+<li class="chapter" data-level="3.2.22" data-path="grafikai.html"><a href="grafikai.html#keliu-grafiku-isdeliojimas-greta"><i class="fa fa-check"></i><b>3.2.22</b> Kelių grafikų išdėliojimas greta</a></li>
+<li class="chapter" data-level="3.2.23" data-path="grafikai.html"><a href="grafikai.html#ggplot2-resursai"><i class="fa fa-check"></i><b>3.2.23</b> Resursai: <strong><em>ggplot2</em></strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html"><i class="fa fa-check"></i><b>4</b> Skaitinės suvestinės</a><ul>
+<li class="chapter" data-level="4.1" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#teorija-skaitines-suvestines"><i class="fa fa-check"></i><b>4.1</b> Teorinė dalis</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#aprasomoji-statistika"><i class="fa fa-check"></i><b>4.1.1</b> Aprašomoji statistika</a></li>
+<li class="chapter" data-level="4.1.2" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#ga-parametrai-ir-imties-statistikos"><i class="fa fa-check"></i><b>4.1.2</b> GA parametrai ir imties statistikos</a></li>
+<li class="chapter" data-level="4.1.3" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#suvestines-1"><i class="fa fa-check"></i><b>4.1.3</b> Aprašomosios statistikos</a></li>
+<li class="chapter" data-level="4.1.4" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#imties-dydis--privaloma"><i class="fa fa-check"></i><b>4.1.4</b> Imties dydis – jį privaloma pateikti ataskaitoje</a></li>
+<li class="chapter" data-level="4.1.5" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#kintamojo-aprasymas"><i class="fa fa-check"></i><b>4.1.5</b> Kaip statistiškai aprašyti vieno kintamojo reikšmes?</a></li>
+<li class="chapter" data-level="4.1.6" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#kaip-pasirinkti-tolydiesiems-duomenims-tinkamas-suvestines"><i class="fa fa-check"></i><b>4.1.6</b> Kaip pasirinkti tolydiesiems duomenims tinkamas suvestines?</a></li>
+<li class="chapter" data-level="4.1.7" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#kvantiliai-ir-kvartiliai"><i class="fa fa-check"></i><b>4.1.7</b> Kvantiliai ir kvartiliai</a></li>
+<li class="chapter" data-level="4.1.8" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#statistinis-daznis-ir-dazniu-lenteles"><i class="fa fa-check"></i><b>4.1.8</b> Statistinis dažnis ir dažnių lentelės</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#pasirengimas-praktinei-daliai"><i class="fa fa-check"></i><b>4.2</b> Pasirengimas praktinei daliai</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#rs-projektas-4"><i class="fa fa-check"></i><b>4.2.1</b> Paketai ir <em>RStudio</em> projektas</a></li>
+<li class="chapter" data-level="4.2.2" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#duomenys"><i class="fa fa-check"></i><b>4.2.2</b> Duomenys</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#suvestines-r-base"><i class="fa fa-check"></i><b>4.3</b> Suvestinės baziniu <em>R</em> būdu</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#fun-summary"><i class="fa fa-check"></i><b>4.3.1</b> Funkcija <strong><em>summary()</em></strong></a></li>
+<li class="chapter" data-level="4.3.2" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#fun-hmisc-describe"><i class="fa fa-check"></i><b>4.3.2</b> <em>Hmisc::</em><strong><em>describe()</em></strong></a></li>
+<li class="chapter" data-level="4.3.3" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#fun-psych-describe"><i class="fa fa-check"></i><b>4.3.3</b> <em>psych::</em><strong><em>describe()</em></strong></a><ul>
+<li class="chapter" data-level="" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#pavyzdys-1"><i class="fa fa-check"></i>Pavyzdys 1:</a></li>
+<li class="chapter" data-level="" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#pavyzdys-2"><i class="fa fa-check"></i>Pavyzdys 2:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.4" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#psychdescribeby-skaitines-suvestines-pogrupiams"><i class="fa fa-check"></i><b>4.3.4</b> <em>psych::</em><strong><em>describeBy()</em></strong>: skaitinės suvestinės pogrupiams</a><ul>
+<li class="chapter" data-level="" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#pavyzdys-1-1"><i class="fa fa-check"></i>Pavyzdys 1:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#jungimo-operatorius"><i class="fa fa-check"></i><b>4.4</b> Operatorius <strong><em>%&gt;%</em></strong></a></li>
+<li class="chapter" data-level="4.5" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#suvestines-tidyverse"><i class="fa fa-check"></i><b>4.5</b> Suvestinės <strong><em>tidyverse</em></strong> būdu</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#suvestiniu-funkcijos-naudojamos-su-summarise"><i class="fa fa-check"></i><b>4.5.1</b> Suvestinių funkcijos naudojamos su <strong><em>summarise()</em></strong></a></li>
+<li class="chapter" data-level="4.5.2" data-path="skaitines-suvestines.html"><a href="skaitines-suvestines.html#pavyzdziai"><i class="fa fa-check"></i><b>4.5.2</b> Pavyzdžiai</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html"><i class="fa fa-check"></i><b>5</b> Duomenų pertvarkymas ir parengimas analizei</a><ul>
+<li class="chapter" data-level="5.1" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#teorine-dalis"><i class="fa fa-check"></i><b>5.1</b> Teorinė dalis</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#eksperimentu-imtys"><i class="fa fa-check"></i><b>5.1.1</b> Priklausomų ir nepriklausomų imčių duomenys</a></li>
+<li class="chapter" data-level="5.1.2" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#ilgasis-vs-platusis"><i class="fa fa-check"></i><b>5.1.2</b> Ilgasis ir platusis duomenų lentelių formatai</a></li>
+<li class="chapter" data-level="5.1.3" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#analizes-dokumento-struktura"><i class="fa fa-check"></i><b>5.1.3</b> Duomenų analizės dokumento struktūra</a></li>
+<li class="chapter" data-level="5.1.4" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#pertvarkymas-ir-tidyverse"><i class="fa fa-check"></i><b>5.1.4</b> Apie duomenų pertvarkymą ir „tidyverse“</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#pasirengimas-praktinei-daliai-1"><i class="fa fa-check"></i><b>5.2</b> Pasirengimas praktinei daliai</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#rs-projektas-5"><i class="fa fa-check"></i><b>5.2.1</b> Paketai ir <em>RStudio</em> projektas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#duomenu-lenteles-klases-keitimas"><i class="fa fa-check"></i><b>5.3</b> Duomenų lentelės klasės keitimas</a><ul>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#pavyzdziai-is-funkcijos"><i class="fa fa-check"></i>Pavyzdžiai: „is…“ funkcijos</a></li>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#pavyzdziai-as-funkcijos"><i class="fa fa-check"></i>Pavyzdžiai: „as…“ funkcijos</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#duomenu-lenteles-eilutes"><i class="fa fa-check"></i><b>5.4</b> Duomenų lentelės eilutės</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#eiluciu-pavadinimai"><i class="fa fa-check"></i><b>5.4.1</b> Eilučių pavadinimai</a></li>
+<li class="chapter" data-level="5.4.2" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#eiluciu-pasirinkimas-ir-pasalinimas"><i class="fa fa-check"></i><b>5.4.2</b> Eilučių pasirinkimas ir pašalinimas</a><ul>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#filter-pagalbines"><i class="fa fa-check"></i>Pagalbinės funkcijos ir operatoriai eilučių pasirinkimui</a></li>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#filter-pavyzdziai"><i class="fa fa-check"></i>Pavyzdžiai</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4.3" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#eiluciu-perrikiavimas"><i class="fa fa-check"></i><b>5.4.3</b> Eilučių perrikiavimas</a><ul>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#arrange-pavyzdziai"><i class="fa fa-check"></i>Pavyzdžiai</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4.4" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#eiluciu-sugrupavimas"><i class="fa fa-check"></i><b>5.4.4</b> Eilučių sugrupavimas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#duomenu-lenteles-stulpeliai-kintamieji"><i class="fa fa-check"></i><b>5.5</b> Duomenų lentelės stulpeliai (kintamieji)</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#stulpeliu-pervadinimas"><i class="fa fa-check"></i><b>5.5.1</b> Stulpelių pervadinimas</a><ul>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#rename-pavyzdziai"><i class="fa fa-check"></i>Pavyzdžiai</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5.2" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#stulpeliu-pasirinkimas-pasalinimas-ar-perrikiavimas"><i class="fa fa-check"></i><b>5.5.2</b> Stulpelių pasirinkimas, pašalinimas ar perrikiavimas</a><ul>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#select-pavyzdziai"><i class="fa fa-check"></i>Pavyzdžiai</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5.3" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#pagalbines-funkcijos-stulpeliu-pasirinkimui"><i class="fa fa-check"></i><b>5.5.3</b> Pagalbinės funkcijos stulpelių pasirinkimui</a><ul>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#pavyzdziai-1"><i class="fa fa-check"></i>Pavyzdžiai</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5.4" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#stulpeliu-transformavimas-perskaiciavimas"><i class="fa fa-check"></i><b>5.5.4</b> Stulpelių transformavimas, perskaičiavimas</a><ul>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#mutate-pavyzdziai"><i class="fa fa-check"></i>Pavyzdžiai</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5.5" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#kintamojo-klases-keitimas"><i class="fa fa-check"></i><b>5.5.5</b> Kintamojo klasės keitimas</a><ul>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#pavyzdziai-2"><i class="fa fa-check"></i>Pavyzdžiai</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5.6" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#reiksmiu-perkodavimas"><i class="fa fa-check"></i><b>5.5.6</b> Kintamojo reikšmių perkodavimas</a><ul>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#pavyzdziai-su-duomenu-eilutemis"><i class="fa fa-check"></i>Pavyzdžiai su duomenų eilutėmis</a></li>
+<li class="chapter" data-level="" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#pavyzdziai-su-duomenu-lentelemis"><i class="fa fa-check"></i>Pavyzdžiai su duomenų lentelėmis</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5.7" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#kintamojo-reiksmiu-kategorizavimas"><i class="fa fa-check"></i><b>5.5.7</b> Kintamojo reikšmių kategorizavimas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#lenteles-formos-keitimas"><i class="fa fa-check"></i><b>5.6</b> Lentelės formos keitimas</a></li>
+<li class="chapter" data-level="5.7" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#keliu-duomenu-lenteliu-sujungimas"><i class="fa fa-check"></i><b>5.7</b> Kelių duomenų lentelių sujungimas</a><ul>
+<li class="chapter" data-level="5.7.1" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#eiluciu-prijungimas"><i class="fa fa-check"></i><b>5.7.1</b> Eilučių prijungimas</a></li>
+<li class="chapter" data-level="5.7.2" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#stulpeliu-prijungimas"><i class="fa fa-check"></i><b>5.7.2</b> Stulpelių prijungimas</a></li>
+<li class="chapter" data-level="5.7.3" data-path="duomenu-parengimas.html"><a href="duomenu-parengimas.html#lenteliu-sujungimas-pagal-stebejimo-id-ar-pavadinima"><i class="fa fa-check"></i><b>5.7.3</b> Lentelių sujungimas pagal stebėjimo ID ar pavadinimą</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="ataskaitos.html"><a href="ataskaitos.html"><i class="fa fa-check"></i><b>6</b> Ataskaitų rengimas</a><ul>
+<li class="chapter" data-level="6.1" data-path="ataskaitos.html"><a href="ataskaitos.html#r-markdown-dokumentai"><i class="fa fa-check"></i><b>6.1</b> „R Markdown“ dokumentai</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="ataskaitos.html"><a href="ataskaitos.html#r-markdown-dokumento-atidarymas"><i class="fa fa-check"></i><b>6.1.1</b> <em>R Markdown</em> dokumento atidarymas</a></li>
+<li class="chapter" data-level="6.1.2" data-path="ataskaitos.html"><a href="ataskaitos.html#r-markdown-dokumento-struktura"><i class="fa fa-check"></i><b>6.1.2</b> <em>R Markdown</em> dokumento struktūra</a></li>
+<li class="chapter" data-level="6.1.3" data-path="ataskaitos.html"><a href="ataskaitos.html#ataskaitu-generavimas"><i class="fa fa-check"></i><b>6.1.3</b> Ataskaitų generavimas</a></li>
+<li class="chapter" data-level="6.1.4" data-path="ataskaitos.html"><a href="ataskaitos.html#r-markdown-sintakse"><i class="fa fa-check"></i><b>6.1.4</b> <em>R Markdown</em> sintaksė</a></li>
+<li class="chapter" data-level="6.1.5" data-path="ataskaitos.html"><a href="ataskaitos.html#paketas-addins.rmd-ir-rstudio-iskiepiai"><i class="fa fa-check"></i><b>6.1.5</b> Paketas <strong><em>addins.rmd</em></strong> ir <em>RStudio</em> įskiepiai</a></li>
+<li class="chapter" data-level="6.1.6" data-path="ataskaitos.html"><a href="ataskaitos.html#programos-kodo-blokai"><i class="fa fa-check"></i><b>6.1.6</b> Programos kodo blokai</a></li>
+<li class="chapter" data-level="6.1.7" data-path="ataskaitos.html"><a href="ataskaitos.html#funkcija-pander"><i class="fa fa-check"></i><b>6.1.7</b> Funkcija <strong><em>pander</em></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="ataskaitos.html"><a href="ataskaitos.html#uzrasu-knygutes-rezimas"><i class="fa fa-check"></i><b>6.2</b> Užrašų knygutės režimas</a></li>
+<li class="chapter" data-level="6.3" data-path="ataskaitos.html"><a href="ataskaitos.html#latex-lygtys"><i class="fa fa-check"></i><b>6.3</b> TeX / LaTeX lygtys</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="ataskaitos.html"><a href="ataskaitos.html#latex-rmarkdown"><i class="fa fa-check"></i><b>6.3.1</b> <em>LaTeX</em> lygtys <em>R Markdown</em> bylose</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="ataskaitos.html"><a href="ataskaitos.html#latex-grafikuose"><i class="fa fa-check"></i><b>6.4</b> Lygtys grafikų antraštėse</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="ataskaitos.html"><a href="ataskaitos.html#latex2exp-palaikomos-israiskos"><i class="fa fa-check"></i><b>6.4.1</b> Matematinės išraiškos, kurias palaiko paketas <strong><em>latex2exp</em></strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="skirstiniai.html"><a href="skirstiniai.html"><i class="fa fa-check"></i><b>7</b> Atsitiktiniai dydžiai ir skirstiniai</a><ul>
+<li class="chapter" data-level="7.1" data-path="skirstiniai.html"><a href="skirstiniai.html#apie-pratybas"><i class="fa fa-check"></i><b>7.1</b> Apie pratybas</a></li>
+<li class="chapter" data-level="7.2" data-path="skirstiniai.html"><a href="skirstiniai.html#tikimybiu-teorijos-elementai"><i class="fa fa-check"></i><b>7.2</b> Tikimybių teorijos elementai</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="skirstiniai.html"><a href="skirstiniai.html#tikimybiniai-eksperimentai-ir-ivykiai"><i class="fa fa-check"></i><b>7.2.1</b> Tikimybiniai eksperimentai ir įvykiai</a></li>
+<li class="chapter" data-level="7.2.2" data-path="skirstiniai.html"><a href="skirstiniai.html#atsitiktinis-dydis"><i class="fa fa-check"></i><b>7.2.2</b> Atsitiktinis dydis</a></li>
+<li class="chapter" data-level="7.2.3" data-path="skirstiniai.html"><a href="skirstiniai.html#tikimybe"><i class="fa fa-check"></i><b>7.2.3</b> Tikimybė</a></li>
+<li class="chapter" data-level="7.2.4" data-path="skirstiniai.html"><a href="skirstiniai.html#skirstiniai-1"><i class="fa fa-check"></i><b>7.2.4</b> Skirstiniai</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="skirstiniai.html"><a href="skirstiniai.html#tikimybiniai-atsitiktiniu-dydziu-modeliai"><i class="fa fa-check"></i><b>7.3</b> Tikimybiniai atsitiktinių dydžių modeliai</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="skirstiniai.html"><a href="skirstiniai.html#binominis"><i class="fa fa-check"></i><b>7.3.1</b> Binominis skirstinys</a></li>
+<li class="chapter" data-level="7.3.2" data-path="skirstiniai.html"><a href="skirstiniai.html#puasono"><i class="fa fa-check"></i><b>7.3.2</b> Puasono skirstinys</a></li>
+<li class="chapter" data-level="7.3.3" data-path="skirstiniai.html"><a href="skirstiniai.html#binominio-skirstinio-aproksimacija-puasono-skirstiniu"><i class="fa fa-check"></i><b>7.3.3</b> Binominio skirstinio aproksimacija Puasono skirstiniu</a></li>
+<li class="chapter" data-level="7.3.4" data-path="skirstiniai.html"><a href="skirstiniai.html#geometrinis"><i class="fa fa-check"></i><b>7.3.4</b> Geometrinis skirstinys</a></li>
+<li class="chapter" data-level="7.3.5" data-path="skirstiniai.html"><a href="skirstiniai.html#neig-binominis"><i class="fa fa-check"></i><b>7.3.5</b> Neigiamas binominis skirstinys</a></li>
+<li class="chapter" data-level="7.3.6" data-path="skirstiniai.html"><a href="skirstiniai.html#normalusis"><i class="fa fa-check"></i><b>7.3.6</b> Normalusis skirstinys</a></li>
+<li class="chapter" data-level="7.3.7" data-path="skirstiniai.html"><a href="skirstiniai.html#log-normalusis"><i class="fa fa-check"></i><b>7.3.7</b> Log-normalusis skirstinys</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="skirstiniai.html"><a href="skirstiniai.html#skirstiniai-r"><i class="fa fa-check"></i><b>7.4</b> Skirstiniai programoje <em>R</em></a><ul>
+<li class="chapter" data-level="7.4.1" data-path="skirstiniai.html"><a href="skirstiniai.html#tikimybės-rcmdr"><i class="fa fa-check"></i><b>7.4.1</b> <em>R Commander</em> tikimybių skaičiuoklės</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="skirstiniai.html"><a href="skirstiniai.html#tikimybes-geogebra"><i class="fa fa-check"></i><b>7.5</b> Programos <em>GeoGebra</em> tikimybių skaičiuoklė</a></li>
+<li class="chapter" data-level="7.6" data-path="skirstiniai.html"><a href="skirstiniai.html#skirstiniai-ir-tikimybiniai-uzdaviniai"><i class="fa fa-check"></i><b>7.6</b> Skirstiniai ir tikimybiniai uždaviniai</a><ul>
+<li class="chapter" data-level="7.6.1" data-path="skirstiniai.html"><a href="skirstiniai.html#zinome-tikimybe-kaip-rasti-kvantili"><i class="fa fa-check"></i><b>7.6.1</b> Žinome tikimybę, kaip rasti kvantilį?</a></li>
+<li class="chapter" data-level="7.6.2" data-path="skirstiniai.html"><a href="skirstiniai.html#zinome-kvantili-kaip-rasti-tikimybe"><i class="fa fa-check"></i><b>7.6.2</b> Žinome kvantilį, kaip rasti tikimybę?</a></li>
+<li class="chapter" data-level="7.6.3" data-path="skirstiniai.html"><a href="skirstiniai.html#zinome-reiksme-kaip-rasti-jos-igijimo-tikimybetikimybes-tanki"><i class="fa fa-check"></i><b>7.6.3</b> Žinome reikšmę, kaip rasti jos įgijimo tikimybę/tikimybės tankį?</a></li>
+<li class="chapter" data-level="7.6.4" data-path="skirstiniai.html"><a href="skirstiniai.html#tikimybiniu-uzdaviniu-pavyzdziai"><i class="fa fa-check"></i><b>7.6.4</b> Tikimybinių uždavinių pavyzdžiai</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="skirstiniai.html"><a href="skirstiniai.html#gof-grafikai"><i class="fa fa-check"></i><b>7.7</b> Grafiniai būdai modelio ir duomenų suderinamumui vertinti</a><ul>
+<li class="chapter" data-level="7.7.1" data-path="skirstiniai.html"><a href="skirstiniai.html#qq-diagrama"><i class="fa fa-check"></i><b>7.7.1</b> Kvantilių palyginimo (qq) diagrama</a></li>
+<li class="chapter" data-level="7.7.2" data-path="skirstiniai.html"><a href="skirstiniai.html#statistiniai-kriterijai-normalumui-tikrinti"><i class="fa fa-check"></i><b>7.7.2</b> Statistiniai kriterijai normalumui tikrinti</a></li>
+<li class="chapter" data-level="7.7.3" data-path="skirstiniai.html"><a href="skirstiniai.html#normalumo-tikrinimas-pogrupiams"><i class="fa fa-check"></i><b>7.7.3</b> Normalumo tikrinimas pogrupiams</a></li>
+<li class="chapter" data-level="7.7.4" data-path="skirstiniai.html"><a href="skirstiniai.html#tikimybiu-tikimybiu-pp-diagrama"><i class="fa fa-check"></i><b>7.7.4</b> Tikimybių-tikimybių (pp) diagrama</a></li>
+<li class="chapter" data-level="7.7.5" data-path="skirstiniai.html"><a href="skirstiniai.html#kitu-tipu-grafikai"><i class="fa fa-check"></i><b>7.7.5</b> Kitų tipų grafikai</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="skirstiniai.html"><a href="skirstiniai.html#gof-statistikos"><i class="fa fa-check"></i><b>7.8</b> Skaitiniai būdai modelio ir duomenų suderinamumui vertinti</a></li>
+<li class="chapter" data-level="7.9" data-path="skirstiniai.html"><a href="skirstiniai.html#statistinio-modelio-parinkimas-duomenims"><i class="fa fa-check"></i><b>7.9</b> Statistinio modelio parinkimas duomenims</a><ul>
+<li class="chapter" data-level="7.9.1" data-path="skirstiniai.html"><a href="skirstiniai.html#paketas-fitdistrplus-teoriniam-modeliui-parinkti"><i class="fa fa-check"></i><b>7.9.1</b> Paketas <strong><em>fitdistrplus</em></strong> teoriniam modeliui parinkti</a></li>
+<li class="chapter" data-level="7.9.2" data-path="skirstiniai.html"><a href="skirstiniai.html#keliu-modeliu-palyginimas-paketas-fitdistrplus"><i class="fa fa-check"></i><b>7.9.2</b> Kelių modelių palyginimas (paketas <strong><em>fitdistrplus</em></strong>)</a><ul>
+<li class="chapter" data-level="" data-path="skirstiniai.html"><a href="skirstiniai.html#palyginimas-grafiskai"><i class="fa fa-check"></i>Palyginimas grafiškai</a></li>
+<li class="chapter" data-level="" data-path="skirstiniai.html"><a href="skirstiniai.html#gofstat"><i class="fa fa-check"></i>Palyginimas naudojant skaitines statistikas</a></li>
+</ul></li>
+<li class="chapter" data-level="7.9.3" data-path="skirstiniai.html"><a href="skirstiniai.html#jei-dazniu-lentele-fitdistrplus"><i class="fa fa-check"></i><b>7.9.3</b> Jei duomenys pateikti kaip dažnių lentelė (<strong><em>fitdistrplus</em></strong>)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="pi.html"><a href="pi.html"><i class="fa fa-check"></i><b>8</b> Pasikliautinieji intervalai (PI)</a><ul>
+<li class="chapter" data-level="8.1" data-path="pi.html"><a href="pi.html#pi-braizymas"><i class="fa fa-check"></i><b>8.1</b> Nubraižyti lentele pateiktus PI</a></li>
+<li class="chapter" data-level="8.2" data-path="pi.html"><a href="pi.html#klasikiniai-metodai-pi-skaiciuoti"><i class="fa fa-check"></i><b>8.2</b> Klasikiniai metodai PI skaičiuoti</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="pi.html"><a href="pi.html#z-formule"><i class="fa fa-check"></i><b>8.2.1</b> Vidurkio PI, kai GA dispersija žinoma</a></li>
+<li class="chapter" data-level="8.2.2" data-path="pi.html"><a href="pi.html#t-formule"><i class="fa fa-check"></i><b>8.2.2</b> Vidurkio PI, kai GA dispersija nežinoma</a><ul>
+<li><a href="pi.html#rcmdr-vidurkio-pi-skaiciavimui"><em>Rcmdr</em> vidurkio PI skaičiavimui</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2.3" data-path="pi.html"><a href="pi.html#n-from-z-formula"><i class="fa fa-check"></i><b>8.2.3</b> Imties dydžio skaičiavimas norimam vidurkio PI ilgiui</a></li>
+<li class="chapter" data-level="8.2.4" data-path="pi.html"><a href="pi.html#proporcijos-pi"><i class="fa fa-check"></i><b>8.2.4</b> Proporcijos PI</a><ul>
+<li class="chapter" data-level="" data-path="pi.html"><a href="pi.html#pavyzdys-1-triusiai"><i class="fa fa-check"></i>Pavyzdys 1: triušiai</a></li>
+<li class="chapter" data-level="" data-path="pi.html"><a href="pi.html#pavyzdys-2-rasine-ivairove"><i class="fa fa-check"></i>Pavyzdys 2: rasinė įvairovė</a></li>
+<li class="chapter" data-level="" data-path="pi.html"><a href="pi.html#pavyzdys-3-grupes-pagal-ugi"><i class="fa fa-check"></i>Pavyzdys 3: grupės pagal ūgį</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="stat-testai-1.html"><a href="stat-testai-1.html"><i class="fa fa-check"></i><b>9</b> Hipotezių tikrinimas 1-2 imtims</a><ul>
+<li class="chapter" data-level="9.1" data-path="stat-testai-1.html"><a href="stat-testai-1.html#parametriniai-ir-neparametriniai-kriterijai"><i class="fa fa-check"></i><b>9.1</b> Parametriniai ir neparametriniai kriterijai</a></li>
+<li class="chapter" data-level="9.2" data-path="stat-testai-1.html"><a href="stat-testai-1.html#rekomendacija-kaip-atlikti-statistiniu-hipoteziu-tikrinima"><i class="fa fa-check"></i><b>9.2</b> Rekomendacija, kaip atlikti statistinių hipotezių tikrinimą</a></li>
+<li class="chapter" data-level="9.3" data-path="stat-testai-1.html"><a href="stat-testai-1.html#schemos-metodams-pasirinkti"><i class="fa fa-check"></i><b>9.3</b> Schemos metodams pasirinkti</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="stat-testai-1.html"><a href="stat-testai-1.html#normalumo-prielaidos-tikrinimas"><i class="fa fa-check"></i><b>9.3.1</b> Normalumo prielaidos tikrinimas</a><ul>
+<li class="chapter" data-level="" data-path="stat-testai-1.html"><a href="stat-testai-1.html#statistines-hipotezes"><i class="fa fa-check"></i>Statistinės hipotezės</a></li>
+<li class="chapter" data-level="" data-path="stat-testai-1.html"><a href="stat-testai-1.html#pasirinkimu-schema"><i class="fa fa-check"></i>Pasirinkimų schema</a></li>
+<li class="chapter" data-level="" data-path="stat-testai-1.html"><a href="stat-testai-1.html#kaip-atlikti"><i class="fa fa-check"></i>Kaip atlikti?</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3.2" data-path="stat-testai-1.html"><a href="stat-testai-1.html#dispersiju-lyginimas"><i class="fa fa-check"></i><b>9.3.2</b> Kriterijai dispersijoms lyginti</a><ul>
+<li class="chapter" data-level="" data-path="stat-testai-1.html"><a href="stat-testai-1.html#statistines-hipotezes-1"><i class="fa fa-check"></i>Statistinės hipotezės</a></li>
+<li class="chapter" data-level="" data-path="stat-testai-1.html"><a href="stat-testai-1.html#pasirinkimu-schema-1"><i class="fa fa-check"></i>Pasirinkimų schema</a></li>
+<li class="chapter" data-level="" data-path="stat-testai-1.html"><a href="stat-testai-1.html#kaip-atlikti-1"><i class="fa fa-check"></i>Kaip atlikti?</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3.3" data-path="stat-testai-1.html"><a href="stat-testai-1.html#centro-padeties-lyginimas-1"><i class="fa fa-check"></i><b>9.3.3</b> Kriterijai centro padėčiai lyginti</a><ul>
+<li class="chapter" data-level="" data-path="stat-testai-1.html"><a href="stat-testai-1.html#statistines-hipotezes-parametriniai-kriterijai"><i class="fa fa-check"></i>Statistinės hipotezės: parametriniai kriterijai</a></li>
+<li class="chapter" data-level="" data-path="stat-testai-1.html"><a href="stat-testai-1.html#statistines-hipotezes-neparametriniai-kriterijai"><i class="fa fa-check"></i>Statistinės hipotezės: neparametriniai kriterijai</a></li>
+<li class="chapter" data-level="" data-path="stat-testai-1.html"><a href="stat-testai-1.html#pasirinkimu-schema-2"><i class="fa fa-check"></i>Pasirinkimų schema</a></li>
+<li class="chapter" data-level="" data-path="stat-testai-1.html"><a href="stat-testai-1.html#kaip-atlikti-2"><i class="fa fa-check"></i>Kaip atlikti?</a></li>
+<li class="chapter" data-level="" data-path="stat-testai-1.html"><a href="stat-testai-1.html#kaip-aprasyti-rezultatus"><i class="fa fa-check"></i>Kaip aprašyti rezultatus?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="stat-testai-1.html"><a href="stat-testai-1.html#praktiniai-patarimai"><i class="fa fa-check"></i><b>9.4</b> Praktiniai patarimai</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="stat-testai-1.html"><a href="stat-testai-1.html#teisingas-duomenu-nuskaitymas"><i class="fa fa-check"></i><b>9.4.1</b> Teisingas duomenų nuskaitymas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="stat-testai-2.html"><a href="stat-testai-2.html"><i class="fa fa-check"></i><b>10</b> ANOVA ir jos analogai</a><ul>
+<li class="chapter" data-level="10.1" data-path="stat-testai-2.html"><a href="stat-testai-2.html#kas-yra-anova"><i class="fa fa-check"></i><b>10.1</b> Kas yra ANOVA?</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="stat-testai-2.html"><a href="stat-testai-2.html#ANOVA-ir-analogai"><i class="fa fa-check"></i><b>10.1.1</b> Kurį vienfaktorės ANOVA variantą ar analogą pasirinkti?</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="stat-testai-2.html"><a href="stat-testai-2.html#issamios-ANOVA-aspektai"><i class="fa fa-check"></i><b>10.2</b> Išsamios ANOVA analizės aspektai</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="stat-testai-2.html"><a href="stat-testai-2.html#eiga"><i class="fa fa-check"></i><b>10.2.1</b> Eiga</a></li>
+<li class="chapter" data-level="10.2.2" data-path="stat-testai-2.html"><a href="stat-testai-2.html#klausimas"><i class="fa fa-check"></i><b>10.2.2</b> Klausimas</a></li>
+<li class="chapter" data-level="10.2.3" data-path="stat-testai-2.html"><a href="stat-testai-2.html#duomenys-1"><i class="fa fa-check"></i><b>10.2.3</b> Duomenys</a></li>
+<li class="chapter" data-level="10.2.4" data-path="stat-testai-2.html"><a href="stat-testai-2.html#duomenu-suvestines"><i class="fa fa-check"></i><b>10.2.4</b> Duomenų suvestinės</a></li>
+<li class="chapter" data-level="10.2.5" data-path="stat-testai-2.html"><a href="stat-testai-2.html#duomenu-formatas-ilgasis"><i class="fa fa-check"></i><b>10.2.5</b> Duomenų formatas: ilgasis</a></li>
+<li class="chapter" data-level="10.2.6" data-path="stat-testai-2.html"><a href="stat-testai-2.html#modelio-formule"><i class="fa fa-check"></i><b>10.2.6</b> Modelio formulė</a></li>
+<li class="chapter" data-level="10.2.7" data-path="stat-testai-2.html"><a href="stat-testai-2.html#grafikai-1"><i class="fa fa-check"></i><b>10.2.7</b> Grafikai</a></li>
+<li class="chapter" data-level="10.2.8" data-path="stat-testai-2.html"><a href="stat-testai-2.html#duomenu-pasiskirstymo-normalumo-tikrinimas-grupems"><i class="fa fa-check"></i><b>10.2.8</b> Duomenų pasiskirstymo normalumo tikrinimas grupėms</a></li>
+<li class="chapter" data-level="10.2.9" data-path="stat-testai-2.html"><a href="stat-testai-2.html#dispersiju-homogeniskumo-tikrinimas"><i class="fa fa-check"></i><b>10.2.9</b> Dispersijų homogeniškumo tikrinimas</a></li>
+<li class="chapter" data-level="10.2.10" data-path="stat-testai-2.html"><a href="stat-testai-2.html#tinkamo-anova-varianto-ar-analogo-pasirinkimas"><i class="fa fa-check"></i><b>10.2.10</b> Tinkamo ANOVA varianto ar analogo pasirinkimas</a></li>
+<li class="chapter" data-level="10.2.11" data-path="stat-testai-2.html"><a href="stat-testai-2.html#cld"><i class="fa fa-check"></i><b>10.2.11</b> Kompaktiškas raidinis žymėjimas (<em>cld</em>)</a></li>
+<li class="chapter" data-level="10.2.12" data-path="stat-testai-2.html"><a href="stat-testai-2.html#ANOVA-rezultatu-aprasymas"><i class="fa fa-check"></i><b>10.2.12</b> Rezultatų aprašymas</a><ul>
+<li class="chapter" data-level="" data-path="stat-testai-2.html"><a href="stat-testai-2.html#anova-rezultatai"><i class="fa fa-check"></i>ANOVA rezultatai</a></li>
+<li class="chapter" data-level="" data-path="stat-testai-2.html"><a href="stat-testai-2.html#welch-anova-rezultatai"><i class="fa fa-check"></i>Welch ANOVA rezultatai</a></li>
+<li class="chapter" data-level="" data-path="stat-testai-2.html"><a href="stat-testai-2.html#kruskal-wallis-analizes-rezultatai"><i class="fa fa-check"></i>Kruskal-Wallis analizės rezultatai</a></li>
+<li><a href="stat-testai-2.html#post-hoc-analizes-rezultatai"><em>Post-hoc</em> analizės rezultatai</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="stat-testai-2.html"><a href="stat-testai-2.html#programos-kodai-analizei"><i class="fa fa-check"></i><b>10.3</b> Programos kodai analizei</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="stat-testai-2.html"><a href="stat-testai-2.html#anova"><i class="fa fa-check"></i><b>10.3.1</b> ANOVA</a></li>
+<li class="chapter" data-level="10.3.2" data-path="stat-testai-2.html"><a href="stat-testai-2.html#Welch-F-pvz"><i class="fa fa-check"></i><b>10.3.2</b> Welch ANOVA (Welch F kriterijus)</a></li>
+<li class="chapter" data-level="10.3.3" data-path="stat-testai-2.html"><a href="stat-testai-2.html#kruskal-wallis-kriterijus"><i class="fa fa-check"></i><b>10.3.3</b> Kruskal-Wallis kriterijus</a></li>
+<li class="chapter" data-level="10.3.4" data-path="stat-testai-2.html"><a href="stat-testai-2.html#post-hoc-tukey-hsd-kriterijus"><i class="fa fa-check"></i><b>10.3.4</b> <em>Post-hoc:</em> Tukey HSD kriterijus</a></li>
+<li class="chapter" data-level="10.3.5" data-path="stat-testai-2.html"><a href="stat-testai-2.html#post-hoc-games-howell-kriterijus"><i class="fa fa-check"></i><b>10.3.5</b> <em>Post-hoc:</em> Games-Howell kriterijus</a></li>
+<li class="chapter" data-level="10.3.6" data-path="stat-testai-2.html"><a href="stat-testai-2.html#post-hoc-conover-iman-kriterijus"><i class="fa fa-check"></i><b>10.3.6</b> <em>Post-hoc:</em> Conover-Iman kriterijus</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="stat-testai-2.html"><a href="stat-testai-2.html#pavyzdys-1-kai-duomenys-normalieji-ir-dispersijos-lygios"><i class="fa fa-check"></i><b>10.4</b> Pavyzdys 1: kai duomenys normalieji ir dispersijos lygios</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="stat-testai-2.html"><a href="stat-testai-2.html#ANOVA-pvz"><i class="fa fa-check"></i><b>10.4.1</b> ANOVA (pagrindinė analizė)</a></li>
+<li class="chapter" data-level="10.4.2" data-path="stat-testai-2.html"><a href="stat-testai-2.html#tukey-hsd-1"><i class="fa fa-check"></i><b>10.4.2</b> Tukey kriterijus (<em>post-hoc</em> analizė)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="stat-testai-2.html"><a href="stat-testai-2.html#pavyzdys-2-kai-duomenys-normalieji-bet-dispersijos-nera-lygios"><i class="fa fa-check"></i><b>10.5</b> Pavyzdys 2: kai duomenys normalieji, bet dispersijos nėra lygios</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="stat-testai-2.html"><a href="stat-testai-2.html#welch-anova-pagrindine-analize"><i class="fa fa-check"></i><b>10.5.1</b> Welch ANOVA (pagrindinė analizė)</a></li>
+<li class="chapter" data-level="10.5.2" data-path="stat-testai-2.html"><a href="stat-testai-2.html#games-howell-kriterijus-post-hoc-analize"><i class="fa fa-check"></i><b>10.5.2</b> Games-Howell kriterijus (<em>post-hoc</em> analizė)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="stat-testai-2.html"><a href="stat-testai-2.html#pavyzdys-3-neparametrinis-kriterijus-2-ir-daugiau-grupems-lyginti"><i class="fa fa-check"></i><b>10.6</b> Pavyzdys 3: neparametrinis kriterijus 2 ir daugiau grupėms lyginti</a><ul>
+<li class="chapter" data-level="10.6.1" data-path="stat-testai-2.html"><a href="stat-testai-2.html#kw-pvz"><i class="fa fa-check"></i><b>10.6.1</b> Kruskal-Wallis kriterijus (pagrindinė analizė)</a></li>
+<li class="chapter" data-level="10.6.2" data-path="stat-testai-2.html"><a href="stat-testai-2.html#conover-iman-kriterijus-post-hoc-analize"><i class="fa fa-check"></i><b>10.6.2</b> Conover-Iman kriterijus (<em>post-hoc</em> analizė)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.7" data-path="stat-testai-2.html"><a href="stat-testai-2.html#ANOVA-tipo-analize"><i class="fa fa-check"></i><b>10.7</b> Video pavyzdys</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html"><i class="fa fa-check"></i><b>11</b> Ryšys tarp kintamųjų</a><ul>
+<li class="chapter" data-level="11.1" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#bendrieji-principai"><i class="fa fa-check"></i><b>11.1</b> Bendrieji principai</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#sasaja-neparodo-priezastingumo"><i class="fa fa-check"></i><b>11.1.1</b> Sąsaja neparodo priežastingumo</a></li>
+<li class="chapter" data-level="11.1.2" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#statistinis-sarysio-reiksmingumas"><i class="fa fa-check"></i><b>11.1.2</b> Statistinis sąryšio reikšmingumas</a></li>
+<li class="chapter" data-level="11.1.3" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#rysio-stiprumas"><i class="fa fa-check"></i><b>11.1.3</b> Ryšio stiprumas</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#koreliacine-analize"><i class="fa fa-check"></i><b>11.2</b> Koreliacinė analizė</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#kuri-koreliacijos-varianta-pasirinkti"><i class="fa fa-check"></i><b>11.2.1</b> Kurį koreliacijos variantą pasirinkti?</a></li>
+<li class="chapter" data-level="11.2.2" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#rezultatu-aprasymas-koreliacine-analize"><i class="fa fa-check"></i><b>11.2.2</b> Rezultatų aprašymas: koreliacinė analizė</a></li>
+<li class="chapter" data-level="11.2.3" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#koreliacija-pvz"><i class="fa fa-check"></i><b>11.2.3</b> Pavyzdžiai</a><ul>
+<li class="chapter" data-level="" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#pavyzdys-1-2"><i class="fa fa-check"></i>Pavyzdys 1</a></li>
+<li class="chapter" data-level="" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#pavyzdys-2-1"><i class="fa fa-check"></i>Pavyzdys 2</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2.4" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#informacijos-saltiniai"><i class="fa fa-check"></i><b>11.2.4</b> Informacijos šaltiniai</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#sasaja-tarp-kategoriniu-kintamuju-reiksmiu"><i class="fa fa-check"></i><b>11.3</b> Sąsaja tarp kategorinių kintamųjų reikšmių</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#pozymiu-nepriklausomumo-tikrinimas"><i class="fa fa-check"></i><b>11.3.1</b> Požymių nepriklausomumo tikrinimas</a></li>
+<li class="chapter" data-level="11.3.2" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#kategoriniu-kintamuju-rysio-stiprumas"><i class="fa fa-check"></i><b>11.3.2</b> Kategorinių kintamųjų ryšio stiprumas</a></li>
+<li class="chapter" data-level="11.3.3" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#programos-kodai"><i class="fa fa-check"></i><b>11.3.3</b> Programos kodai</a></li>
+<li class="chapter" data-level="11.3.4" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#informacijos-saltiniai-1"><i class="fa fa-check"></i><b>11.3.4</b> Informacijos šaltiniai</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="kintamuju-rysys.html"><a href="kintamuju-rysys.html#rysio-tarp-kintamuju-analize-naudojant-r-commander"><i class="fa fa-check"></i><b>11.4</b> Ryšio tarp kintamųjų analizė naudojant <em>R Commander</em></a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html"><i class="fa fa-check"></i><b>12</b> Tiesinė regresija</a><ul>
+<li class="chapter" data-level="12.1" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#regresija"><i class="fa fa-check"></i><b>12.1</b> Regresinė analizė</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#regresines-analizes-eiga"><i class="fa fa-check"></i><b>12.1.1</b> Regresinės analizės eiga</a></li>
+<li class="chapter" data-level="12.1.2" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#tinkamos-ties-regr-redikliai"><i class="fa fa-check"></i><b>12.1.2</b> Tinkamo tiesinės regresijos modelio rodikliai</a></li>
+<li class="chapter" data-level="12.1.3" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#regresijos-modelio-grafikas-ggplot2-sistema"><i class="fa fa-check"></i><b>12.1.3</b> Regresijos modelio grafikas <em>ggplot2</em> sistema</a></li>
+<li class="chapter" data-level="12.1.4" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#rezultatu-aprasymas-regresija"><i class="fa fa-check"></i><b>12.1.4</b> Rezultatų aprašymas: tiesinė regresinė analizė</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#saltiniai-regresija"><i class="fa fa-check"></i><b>12.2</b> Informacijos šaltiniai</a></li>
+<li class="chapter" data-level="12.3" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#regresine-analize-naudojant-r-commander"><i class="fa fa-check"></i><b>12.3</b> Regresinė analizė naudojant <em>R Commander</em></a><ul>
+<li class="chapter" data-level="12.3.1" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#ties-regr-paprastoji-rcmdr"><i class="fa fa-check"></i><b>12.3.1</b> Paprastoji tiesinė regresija</a><ul>
+<li class="chapter" data-level="" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#klaibracijos-uzdavinys"><i class="fa fa-check"></i>Kalibracijos uždavinio sprendimas</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3.2" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#ties-regr-daugialype-rcmdr"><i class="fa fa-check"></i><b>12.3.2</b> Daugialypė tiesinė regresija</a></li>
+<li class="chapter" data-level="12.3.3" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#modelio-tobulinimas"><i class="fa fa-check"></i><b>12.3.3</b> Modelio tobulinimas</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#regresijos-pvz-R"><i class="fa fa-check"></i><b>12.4</b> Išsamios tiesinės regresinės analizės pavyzdys</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#klausimas-problema"><i class="fa fa-check"></i><b>12.4.1</b> Klausimas / Problema</a></li>
+<li class="chapter" data-level="12.4.2" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#duomenys-2"><i class="fa fa-check"></i><b>12.4.2</b> Duomenys</a></li>
+<li class="chapter" data-level="12.4.3" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#nusibraizome-kintamuosius"><i class="fa fa-check"></i><b>12.4.3</b> Nusibraižome kintamuosius</a></li>
+<li class="chapter" data-level="12.4.4" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#ivertiname-koreliacija-tarp-kintamuju"><i class="fa fa-check"></i><b>12.4.4</b> Įvertiname koreliaciją tarp kintamųjų</a></li>
+<li class="chapter" data-level="12.4.5" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#regresijos-lygties-sudarymas"><i class="fa fa-check"></i><b>12.4.5</b> Regresijos lygties sudarymas</a></li>
+<li class="chapter" data-level="12.4.6" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#modelio-suvestine"><i class="fa fa-check"></i><b>12.4.6</b> Modelio suvestinė</a></li>
+<li class="chapter" data-level="12.4.7" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#standartizuotieji-koeficientai"><i class="fa fa-check"></i><b>12.4.7</b> Standartizuotieji koeficientai</a></li>
+<li class="chapter" data-level="12.4.8" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#liekamuju-paklaidu-analize"><i class="fa fa-check"></i><b>12.4.8</b> Liekamųjų paklaidų analizė</a><ul>
+<li class="chapter" data-level="" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#isskirciu-paieska"><i class="fa fa-check"></i>1. Išskirčių paieška</a></li>
+<li class="chapter" data-level="" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#paklaidu-normalumo-prielaidos-tikrinimas"><i class="fa fa-check"></i>2. Paklaidų normalumo prielaidos tikrinimas</a></li>
+<li class="chapter" data-level="" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#prielaidos-kad-paklaidu-vidurkis-lygus-nuliui-tikrinimas"><i class="fa fa-check"></i>3. Prielaidos, kad paklaidų vidurkis lygus nuliui, tikrinimas</a></li>
+<li class="chapter" data-level="" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#homoskedastiskumo-prielaidos-tikrinimas"><i class="fa fa-check"></i>4. Homoskedastiškumo prielaidos tikrinimas</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4.9" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#tikrinimas-del-multikolinearumo"><i class="fa fa-check"></i><b>12.4.9</b> Tikrinimas dėl multikolinearumo</a></li>
+<li class="chapter" data-level="12.4.10" data-path="tiesine-regresija.html"><a href="tiesine-regresija.html#prognozavimas"><i class="fa fa-check"></i><b>12.4.10</b> Prognozavimas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="kas-toliau.html"><a href="kas-toliau.html"><i class="fa fa-check"></i>Kas toliau?</a></li>
+<li class="appendix"><span><b>Priedai</b></span></li>
+<li class="chapter" data-level="A" data-path="programu-diegimas.html"><a href="programu-diegimas.html"><i class="fa fa-check"></i><b>A</b> Reikiamų programų diegimas</a><ul>
+<li class="chapter" data-level="A.1" data-path="programu-diegimas.html"><a href="programu-diegimas.html#programa-r"><i class="fa fa-check"></i><b>A.1</b> Programa <strong><em>R</em></strong></a></li>
+<li class="chapter" data-level="A.2" data-path="programu-diegimas.html"><a href="programu-diegimas.html#programa-rstudio"><i class="fa fa-check"></i><b>A.2</b> Programa <strong><em>RStudio</em></strong></a></li>
+<li class="chapter" data-level="A.3" data-path="programu-diegimas.html"><a href="programu-diegimas.html#programa-pandoc"><i class="fa fa-check"></i><b>A.3</b> Programa <strong><em>Pandoc</em></strong></a></li>
+<li class="chapter" data-level="A.4" data-path="programu-diegimas.html"><a href="programu-diegimas.html#video-instrukcijos-atsisiuntimas-ir-diegimas"><i class="fa fa-check"></i><b>A.4</b> Video instrukcijos: atsisiuntimas ir diegimas</a></li>
+<li class="chapter" data-level="A.5" data-path="programu-diegimas.html"><a href="programu-diegimas.html#rs-config"><i class="fa fa-check"></i><b>A.5</b> <strong><em>RStudio</em></strong> konfigūravimas</a></li>
+<li class="chapter" data-level="A.6" data-path="programu-diegimas.html"><a href="programu-diegimas.html#r-paketu-diegimas"><i class="fa fa-check"></i><b>A.6</b> <strong><em>R</em></strong> paketų diegimas</a><ul>
+<li class="chapter" data-level="A.6.1" data-path="programu-diegimas.html"><a href="programu-diegimas.html#diegimo-problemu-sprendimai"><i class="fa fa-check"></i><b>A.6.1</b> Kilus problemų dėl paketų diegimo…</a></li>
+</ul></li>
+<li class="chapter" data-level="A.7" data-path="programu-diegimas.html"><a href="programu-diegimas.html#mac-vartotojams"><i class="fa fa-check"></i><b>A.7</b> <em>Mac</em> vartotojams</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="zodynai.html"><a href="zodynai.html"><i class="fa fa-check"></i><b>B</b> Žodynėliai</a><ul>
+<li class="chapter" data-level="B.1" data-path="zodynai.html"><a href="zodynai.html#statistikos-terminai-aiskinamasis-zodynas"><i class="fa fa-check"></i><b>B.1</b> Statistikos terminai (aiškinamasis žodynas)</a></li>
+<li class="chapter" data-level="B.2" data-path="zodynai.html"><a href="zodynai.html#statistikos-terminai-anglu-lietuviu"><i class="fa fa-check"></i><b>B.2</b> Statistikos terminai (anglų-lietuvių)</a></li>
+<li class="chapter" data-level="B.3" data-path="zodynai.html"><a href="zodynai.html#simboliu-pavadinimai-anglu-lietuviu"><i class="fa fa-check"></i><b>B.3</b> Simbolių pavadinimai (anglų-lietuvių)</a></li>
+<li class="chapter" data-level="B.4" data-path="zodynai.html"><a href="zodynai.html#programavimo-ir-matematikos-terminai-anglu-lietuviu"><i class="fa fa-check"></i><b>B.4</b> Programavimo ir matematikos terminai (anglų-lietuvių)</a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="priedas-r-sesijos-info.html"><a href="priedas-r-sesijos-info.html"><i class="fa fa-check"></i><b>C</b> <strong><em>R</em></strong> sesijos informacija</a></li>
+<li class="chapter" data-level="D" data-path="priedas-projektas.html"><a href="priedas-projektas.html"><i class="fa fa-check"></i><b>D</b> Projekto šablonas</a><ul>
+<li class="chapter" data-level="D.1" data-path="priedas-projektas.html"><a href="priedas-projektas.html#projekto-sablonas"><i class="fa fa-check"></i><b>D.1</b> <em>RStudio</em> projekto šablonas</a></li>
+<li class="chapter" data-level="D.2" data-path="priedas-projektas.html"><a href="priedas-projektas.html#byla-Rprofile"><i class="fa fa-check"></i><b>D.2</b> Konfigūracijos byla <strong><em>.Rprofile</em></strong></a></li>
+</ul></li>
+<li class="chapter" data-level="E" data-path="priedas-papildomas-diegimas.html"><a href="priedas-papildomas-diegimas.html"><i class="fa fa-check"></i><b>E</b> Papildomų papildinių diegimas</a></li>
+<li class="chapter" data-level="F" data-path="priedas-darbo-eiga.html"><a href="priedas-darbo-eiga.html"><i class="fa fa-check"></i><b>F</b> Darbo eiga (atmintinės)</a><ul>
+<li class="chapter" data-level="F.1" data-path="priedas-darbo-eiga.html"><a href="priedas-darbo-eiga.html#duomenu-apsauga-nuo-praradimo"><i class="fa fa-check"></i><b>F.1</b> Duomenų apsauga nuo praradimo</a></li>
+<li class="chapter" data-level="F.2" data-path="priedas-darbo-eiga.html"><a href="priedas-darbo-eiga.html#programos-kodo-rasymo-eiga"><i class="fa fa-check"></i><b>F.2</b> Programos kodo rašymo eiga</a></li>
+<li class="chapter" data-level="F.3" data-path="priedas-darbo-eiga.html"><a href="priedas-darbo-eiga.html#analizes-eiga"><i class="fa fa-check"></i><b>F.3</b> Analizės eiga</a></li>
+<li class="chapter" data-level="F.4" data-path="priedas-darbo-eiga.html"><a href="priedas-darbo-eiga.html#r-commander-uzkrovimas-per-rstudio"><i class="fa fa-check"></i><b>F.4</b> <em>R Commander</em> užkrovimas per <em>RStudio</em></a></li>
+</ul></li>
+<li class="chapter" data-level="G" data-path="priedas-rcmdr-resursai.html"><a href="priedas-rcmdr-resursai.html"><i class="fa fa-check"></i><b>G</b> <em>R Commander</em> resursai</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Biostatistikos pratybos</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ivadas" class="section level1">
+<h1><span class="header-section-number">1. </span> Įvadas</h1>
+<!-- # Teorinė dalis -->
+<div id="analizes-ivadas" class="section level2">
+<h2><span class="header-section-number">1.1</span> Duomenų analizės pagrindai</h2>
+<p>Šiame skyriuje susipažinsime su svarbiausiomis duomenų analizės sąvokomis ir tuo, kur biostatistikos kurso kontekste yra šios pratybos.</p>
+<div id="statistikos-mokslas-ir-jo-dalys" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Statistikos mokslas ir jo dalys</h3>
+<p><strong>Statistikos mokslą</strong> galima apibūdinti kaip tikslųjį mokslą (matematikos šaką) apie tyrimo planavimą, duomenų rinkimą, sisteminimą, analizavimą bei rezultatų interpretavimą. <strong>Biostatistika</strong> ir <strong>biometrija</strong> yra taikomosios statistikos šakos, orientuotos į medicininių ir biologinių duomenų analizę.</p>
+<p>Statistikos metodus galima suskirstyti į 3-4 pagrindines dalis (ryšys tarp šių dalių pavaizduotas pav. <a href="ivadas.html#fig:01-statistikos-dalys">1.1</a>):</p>
+<ol style="list-style-type: decimal">
+<li><strong>Tyrimo planavimas</strong> (angl. <em>(study/experimental) design</em>) – prieš vykdant tyrimą, jis turi būti kruopščiai suplanuojamas. Suplanuojama ir tai, kaip bus sudaryta tiriamųjų imtis, kuri bus tinkama atsakyti į pagrindinį tyrimo klausimą. Nors šis aspektas akcentuojamas pav. <a href="ivadas.html#fig:01-statistikos-dalys">1.1</a>, tačiau tai yra tik viena iš eksperimento plano dalių;</li>
+<li><strong>Aprašomoji statistika</strong> (angl. <em>descriptive statistics</em>) – grafiniai ir skaitiniai duomenų sisteminimo metodai;</li>
+<li><strong>Statistinių išvadų darymas</strong> (angl. <em>inferential statistics</em>) bei <strong>prognozavimas</strong> (angl. <em>prediction</em>) – analizės ir interpretavimo metodai, pagal imties duomenis leidžiantys daryti išvadas apie visą GA ir/arba prognozuoti.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:01-statistikos-dalys"></span>
+<img src="fig/pic/01-statistikos-dalys.png" alt="Sąryšis tarp statistikos dalių, generalinės aibės ir imties. Mėlyna spalva pažymėti terminai bus paaiškinti kitame poskyryje." width="953" />
+<p class="caption">
+Pav. 1.1: Sąryšis tarp statistikos dalių, generalinės aibės ir imties. Mėlyna spalva pažymėti terminai bus paaiškinti kitame poskyryje.
+</p>
+</div>
+<p><br></p>
+<!-- > „Norėdamas būti visiškai suprantamas, privalai būti netikslus.   -->
+<!-- > O tam, kad būtum idealiai tikslus, turi būti nesuprantamas.“ -->
+<!-- > -->
+<!-- > --- Bertrand Russell -->
+<blockquote>
+<p>„Statistikos uždavinys – aiškiai pasakyti tiesą: (pakankamai) tiksliai ir suprantamai.“</p>
+<p>— Stephen McCurdy</p>
+</blockquote>
+<p><br></p>
+</div>
+<div id="generaline-aibe-imtis-ir-duomenys" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Generalinė aibė, imtis ir duomenys</h3>
+<p>Statistikoje yra keli svarbūs terminai: generalinė aibė (populiacija),
+imtis bei duomenys (pav. <a href="ivadas.html#fig:01-GA-imtis-duomenys">1.2</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:01-GA-imtis-duomenys"></span>
+<img src="fig/pic/01-GA-imtis-duomenys.png" alt="Generalinė aibė, imtis ir duomenys. Iš visos tyrimo metu analizuojamos objektų visumos (generalinės aibės, GA) visiškai atsitiktinai arba kitu tikimybiniu būdu sudarome tiriamųjų imtį (paimame dalį GA). Tada išmatuojame ar užregistruojame vieną arba kelis mus dominančius tiriamųjų požymius ir taip gauname duomenis (duomenų imtį)." width="1019" />
+<p class="caption">
+Pav. 1.2: Generalinė aibė, imtis ir duomenys. Iš visos tyrimo metu analizuojamos objektų visumos (generalinės aibės, GA) visiškai atsitiktinai arba kitu tikimybiniu būdu sudarome tiriamųjų imtį (paimame dalį GA). Tada išmatuojame ar užregistruojame vieną arba kelis mus dominančius tiriamųjų požymius ir taip gauname duomenis (duomenų imtį).
+</p>
+</div>
+<p><strong>Generalinė aibė</strong> (GA), arba populiacija,– tai statistinio tyrimo metu nagrinėjama objektų visuma.</p>
+<p><strong>Imtis</strong> – tai į tyrimą patekusi GA dalis (į tyrimą patekę objektai).</p>
+<p><strong>Duomenys</strong> – tai imties objektų savybių <em>reikšmės</em>. Savybės gali būti kokybinės (pvz., spalva) bei kiekybinės (pvz., svoris).</p>
+<p><strong>Imties dydis</strong> – tai imtyje esančių elementų (objektų, tiriamųjų, stebėjimų) skaičius.</p>
+<!-- Šis duomenų apibūdinimas yra supaprastintas.  -->
+<p>Pavyzdys. GA – tai visi 4-5 m. amžiaus naminiai šunys, imtis – tai į tyrimą patekę 4-5 m. amžiaus naminiai šunys, duomenys – į tyrimą patekusių šunų kailio spalva: šviesi, tamsi, marga, …</p>
+<p>Statistiniam tyrimui tinkama imtis privalo būti <strong>pakankamo dydžio</strong> ir <strong>reprezentatyvi</strong>.</p>
+<ul>
+<li>Reprezentatyvi imtis yra tokia, kurioje pakankamai tiksliai atsispindi visos GA savybės. Tai tarsi maža GA kopija. Imtis turi būti reprezentatyvi tai GA, apie kurią daromos statistinės išvados. Kitu atveju išvados bus klaidingos. T. y., jei imtyje yra tik vyresni nei 60 m. amžiaus vyrai, tai didelis klausimas, ar ištyrę juos galime daryti išvadas apie visus žmones, tarp kurių yra ir moterys, vaikai, kūdikiai bei jaunimas.</li>
+<li>Per mažo dydžio imtys yra nereprezentatyvios ir iš jų padarytos išvados, tikėtina, bus klaidingos. Vien tik didelis imties dydis irgi negarantuoja reprezentatyvumo, jei imtis sudaryta netinkamu būdu.</li>
+</ul>
+<!-- Tinklapyje wikipedia (https://lt.wikipedia.org/wiki/Duomenys) rašo, kad duomenys (angl. data) – tai formalizuotas informacijos vaizdinys, tinkamas perduoti kitiems, suvokti ir apdoroti. -->
+<p>Kelios pastabos:</p>
+<ul>
+<li>Atkreipkite dėmesį į tai, kad terminas „populiacija“ statistikoje reiškia ne tą patį, ką biologijoje, todėl, vengiant dviprasmybės, Lietuvių kalba yra aprobuotas kitas statistinis terminas („populiacijos“ sinonimas) – generalinė aibė (GA).</li>
+<li>Terminas „imtis“ gali reikšti ir <em>tiriamųjų imtį</em> (pvz., į tyrimą įtraukti 4-5 m. amžiaus naminiai šunys) ir <em>duomenų imtį</em> (pvz., tyrimo metu užregistruota kiekvieno iš šių šunų kailio spalva).</li>
+</ul>
+</div>
+<div id="statistinio-tyrimo-ciklas" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> Statistinio tyrimo ciklas</h3>
+<p>Statistinio tyrimo eigą galime suskirstyti į 5 sąlygines dalis (pav. <a href="ivadas.html#fig:01-tyrimo-ciklas">1.3</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:01-tyrimo-ciklas"></span>
+<img src="fig/pic/01-tyrimo-ciklas.png" alt="Statistinio tyrimo ciklas." width="975" />
+<p class="caption">
+Pav. 1.3: Statistinio tyrimo ciklas.
+</p>
+</div>
+<p>Glaustas kiekvienos ciklo dalies apibūdinimas:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Klausimas</strong>. Pirmiausia, iškeliame klausimą, susiformuluojame mokslinę problemą, kad žinotume, ką norime padaryti, į kokį klausimą atsakyti, kokią problemą išspręsti savo analize. (Žiūrėkite kitame poskyryje). Be klausimo nėra ir analizės tikslo.</li>
+<li><strong>Planas</strong>. Kai jau žinome klausimą, galime susiplanuoti, kaip į jį atsakysime. Vėlesni tyrimo etapai negali atsverti ir ištaisyti prastai suplanuoto bei nekorektiškai atlikto tyrimo pasekmių.</li>
+<li><strong>Duomenys</strong>. Surenkame duomenis, kurie yra tinkami atsakyti į išsikeltą klausimą. Duomenis parengiame analizei.</li>
+<li><strong>Analizė</strong>. Padarome duomenų suvestines. Pagal klausimą ir duomenų savybes pasirenkame tinkamą tolimesnės analizės metodą. Atliekame šią analizę.</li>
+<li><strong>Išvados</strong>. Grįsdami analizės rezultatais, padarome išvadas – atsakome į iškeltą klausimą. Įprastai gavus atsakymą į vieną klausimą, kyla dar keletas naujų klausimų. Tad toliau bandant atsakyti į naujuosius klausimus susidaro ciklas.</li>
+</ol>
+<p>Jei reikėtų pasirinkti, kas svarbiau atliekant tyrimą – analizės metodas, tinkami duomenys, tyrimo planas ar klausimas,– jūs turėtumėte aiškiai žinoti, kad pagal svarbą šie dalykai išsirikiuoja šitaip: klausimas (ir tikslas) → tyrimo planas → tinkami duomenys → analizės metodas. Jei neaišku kodėl – tada dar kartą perskaitykite kiekvienos statistinio tyrimo ciklo dalies apibūdinimą.</p>
+</div>
+<div id="o-koks-sakete-klausimas" class="section level3">
+<h3><span class="header-section-number">1.1.4</span> O koks, sakėte, klausimas?</h3>
+<div class="figure" style="text-align: center"><span id="fig:01-qestion"></span>
+<img src="fig/pic/01-qestion.png" alt="Klausimas -- pati svarbiausia duomenų analizės dalis, nes suteikia analizei tikslą." width="56" />
+<p class="caption">
+Pav. 1.4: Klausimas – pati svarbiausia duomenų analizės dalis, nes suteikia analizei tikslą.
+</p>
+</div>
+<p>Prieš pradedant duomenų analizę, reikia <strong>aiškiai žinoti, kokiu tikslu</strong> ji yra daroma. Ir <strong>pagrindinis</strong> analizės <strong>tikslas</strong> – spręsti tam tikrą mokslinę, socialinę, verslo, medicininę, gamtinę ar kitokią realaus gyvenimo problemą bei atsakyti į tam tikrą specifinį klausimą, kuris buvo suformuluotas prieš atliekant analizę (pav. <a href="ivadas.html#fig:01-qestion">1.4</a>). Pvz., kuris šokoladas Lietuvos žmonėms labiau patinka (juodasis, pieniškas ar baltasis); kokią įtaką vienas papildomas euras, išleistas ledų reklamai, darytų įmonės pelnui; ar GMC studentai greičiau įsisavina kurso medžiagą, jei prie įprastos rašytinės medžiagos papildomai pateikiama video medžiaga; kurioje terpėje dumbliai greičiau auga; ar naujai kuriamas vaistas gali pailginti miego trukmę; ar pagal fenotipinius požymius galima atpažinti bakterijos genotipinius <em>Gardnerella vaginalis</em> pogrupius; ar kovų baidymas padeda reikšmingai sumažinti paukščių keliamą triukšmą Panevėžio mieste? Analizė, neturinti klausimo ir nesprendžianti problemos yra bevertė, nes neturi tikslo („analizė dėl analizės“). Tad tinkamas aiškiai ir konkrečiai suformuluotas klausimas – pati svarbiausia visos analizės dalis.</p>
+<br>
+<div class="ok">
+<p>
+Tinkamas aiškiai ir konkrečiai suformuluotas <strong>klausimas – pati svarbiausia</strong> tyrimo <strong>dalis</strong>.
+</p>
+</div>
+</div>
+<div id="statistinio-tyrimo-eiga" class="section level3">
+<h3><span class="header-section-number">1.1.5</span> Statistinio tyrimo eiga</h3>
+<p>Tad statistiniam tyrimui būdinga eiga pavaizduota pav. <a href="ivadas.html#fig:01-tyrimo-eiga">1.5</a>.
+<!-- : --></p>
+<!-- 1. Išsikeliame klausimą, apsibrėžiame problemą, kad žinotume, ką norime išspręsti savo analize. -->
+<!-- 2. Tiksliai apsibrėžiame, kas yra mūsų tyrimo metu nagrinėjami objektai (t. y., GA). Susiplanuojame, kaip juos tirsime. -->
+<!-- 3. Sudarome tiriamųjų imtį, kuri yra reprezentatyvi visai GA ir pakankamo dydžio (tam, kad vėliau galėtume daryti išvadas apie visą GA). -->
+<!-- 4. Išmatuojame ar užregistruojame tiriamųjų savybes ir taip surenkame duomenis. -->
+<!-- 5. Surinktus duomenis susisteminame: parengiame analizei, atliekame grafines ir skaitines suvestines. -->
+<!-- 6. Pagal klausimą ir duomenų savybes, nustatytas iš suvestinių bei kitais metodais,  parenkame sudėtingesnės analizės metodą -- duomenims parenkame statistinį modelį, pagal kurį galėsime daryti statistines išvadas ir/arba prognozuoti. -->
+<!-- 7. Darome statistines išvadas (pagal duomenis sprendžiame apie visos GA savybes) ir/arba prognozuojame (pvz., ar ligonis serga, ar sveikas). -->
+<div class="figure" style="text-align: center"><span id="fig:01-tyrimo-eiga"></span>
+<img src="fig/pic/01-tyrimo-eiga.png" alt="Būdinga statistinio tyrimo eiga. Ši schema parengta Čekanavičiaus ir Murausko vadovėlyje „Statistika ir jos taikymai I“ pateiktos schemos pagrindu, papildomai pridėjus punktą „klausimo formulavimas“. Taip norėta akcentuoti, kad pirmiausia reikia nusistatyti tyrimo tikslą. Visgi, kai kurie eigos etapai gali persidengti, pvz., galutinį tyrimo klausimą galime susiformuluoti tik tada, kai tiksliai apsibrėžiame, kas yra mūsų GA (generalinė aibė)." width="990" />
+<p class="caption">
+Pav. 1.5: Būdinga statistinio tyrimo eiga. Ši schema parengta Čekanavičiaus ir Murausko vadovėlyje „Statistika ir jos taikymai I“ pateiktos schemos pagrindu, papildomai pridėjus punktą „klausimo formulavimas“. Taip norėta akcentuoti, kad pirmiausia reikia nusistatyti tyrimo tikslą. Visgi, kai kurie eigos etapai gali persidengti, pvz., galutinį tyrimo klausimą galime susiformuluoti tik tada, kai tiksliai apsibrėžiame, kas yra mūsų GA (generalinė aibė).
+</p>
+</div>
+<br>
+<div class="note">
+<p>
+Šių pratybų metu mes mokysimės dirbti su jau surinktais duomenimis: juos parengti analizei, susisteminti ir statistiškai apibendrinti, patikrinti prielaidas apie duomenis, parinkti statistinės analizės modelį (metodą, testą), daryti statistines išvadas bei prognozuoti.
+</p>
+</div>
+</div>
+<div id="kintamuju-tipai" class="section level3">
+<h3><span class="header-section-number">1.1.6</span> Kintamųjų tipai</h3>
+<p>Statistikoje „<strong>kintamaisiais</strong>“ vadinamos tiriamųjų/objektų savybės. <!-- Jau aiškinomės, kad kintamieji gali būti pateikti, kaip duomenų eilutės arba duomenų lentelės stulpeliai.--> Duomenų analizės metodo pasirinkimas labai smarkiai priklausys nuo kintamojo prigimties. Pagal prigimtį statistiniai kintamieji skirstomi į 2 dideles grupes: <strong>kokybinius</strong> (kategorinius plačiąja prasme) ir <strong>kiekybinius</strong>. Šie, savo ruožtu, skaidomi į 4 pagrindinius tipus (pav. <a href="ivadas.html#fig:01-kintamuju-rusys">1.6</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:01-kintamuju-rusys"></span>
+<img src="fig/pic/01-kintamuju-rusys.png" alt="Pagrindiniai statistinių kintamųjų tipai." width="724" />
+<p class="caption">
+Pav. 1.6: Pagrindiniai statistinių kintamųjų tipai.
+</p>
+</div>
+<!-- dar vadinami tiesiog *kategoriniais* (siaurąja prasme), -->
+<ul>
+<li>Kokybiniai (kategoriniai) kintamieji:
+<ul>
+<li><strong>nominalieji</strong> (angl. <em>nominal variable</em>) – tai tokie kintamieji, kurių reikšmių (vadinamos kategorijomis) išdėstymo tvarka nesvarbi, t. y., reikšmės natūralios eilės tvarkos neturi. Matavimo vienetų irgi neturi. Pvz., ląstelės spalva – violetinė, raudona, melsva, bespalvė, – ląstelės forma – apvali, kvadratinė, pailga, netaisyklinga. Kartais kategorijos užkoduojamos skaičiais, pvz., 0 – sveikas, 1 – serga, bet dėl to kintamasis netampa kiekybiniu. 0 ir 1 tai tik kategorijų kodai, kurių eilės tvarka nesvarbi.</li>
+<li><strong>ranginiai</strong> (angl. <em>ranked/ordered variable</em>) – tai tokie kintamieji, kurių reikšmės (vadinamos kategorijomis) turi natūralią didėjimo ar mažėjimo tvarką, tačiau atstumas tarp gretimų reikšmių nėra pastovus ar tiksliai išmatuojamas. Įprastai matavimo vienetų neturi. Pvz., ląstelės dydžio kategorija – maža, vidutinė, didelė; savijauta – labai prasta, prasta, neutrali, gera, puiki. Ranginiams priklauso ir balais matuojami duomenys.</li>
+</ul></li>
+<li>Kiekybiniai kintamieji:
+<ul>
+<li><strong>diskretieji</strong> (angl. <em>discrete variable</em>) – tai tokie skaitiniai kintamieji, kurie yra <strong>suskaičiuojami</strong>. Jie turi baigtinį (suskaičiuojamą) galimų reikšmių skaičių ir <em>atstumas</em> tarp dviejų galimų gretimų reikšmių yra pastovus ir gali būti tiksliai išmatuotas. Paprasčiau sakant, kiekybiniai diskretieji kintamieji išreiškiami teigiamais ir neigiamais sveikaisiais skaičiais bei nuliu. Įprastai aprašo kieno nors skaičių, pvz., ląstelių skaičių, dantų skaičių, kėdžių skaičių, į paskaitą atėjusių studentų skaičių, sėkmingų bandymų skaičių, raudonų mėgintuvėlių skaičių;</li>
+<li><strong>tolydieji</strong> (angl. <em>continuous variable</em>) – tai skaitiniai kintamieji, kurie įprastai yra <strong>išmatuojami</strong> ar užregistruojami (bet ne suskaičiuojami). Gali įgyti ir trupmeniniais skaičiais užrašomas reikšmes (tarkim, 2,2354), teoriškai gali būti išmatuoti daugybės skaitmenų po kablelio tikslumu. Pasirinktame reikšmių intervale tarp dviejų skaičių (tarkim, tarp 2,2 ir 2,4) gali įgyti be galo daug reikšmių, nes skaičių po kablelio gali būti be galo daug. Įprastai turi konkrečius matavimo vienetus, nors gali būti išreikšti ir santykiniais vienetais ar būti bedimensiai dydžiai. Pvz., ląstelės svoris kilogramais, ilgis centimetrais, trukmė sekundėmis (kai skaičiuojamos ir sekundžių dalys), regėjimo aštrumas dioptrijomis, santykis tarp ilgio (metrais) ir pločio (metrais), šviesos intensyvumas santykiniais vienetais. Įprastai tokius skaičius suapvaliname iki tam tikro tikslumo tik dėl to, kad negalime išmatuoti be galo tiksliai arba praktiniam naudojimui užtenka ir mažesnio baigtinio tikslumo. Visgi teoriškai matuojamas kintamasis išlieka tolydusis.</li>
+</ul></li>
+</ul>
+<!-- **Pastaba:** prietaisų matavimo tikslumas nėra begalinis, tad iš principo visi matavimai yra diskretizuoti (t. y., suapvalinti iki tam tikro tikslumo). Visgi teoriškai matuojamas dydis išlieka tolydusis.  -->
+<!-- **Pastaba:** visi kategoriniai kintamieji yra diskretieji (tai „savaime suprantama“). Skaitiniai kintamieji gali būti arba diskretieji, tolydieji. -->
+<div id="veiksmai-su-kintamaisiais" class="section level4 unnumbered">
+<h4>Kokius veiksmus galima atlikti su skirtingų tipų kintamųjų reikšmėmis?</h4>
+<ol style="list-style-type: lower-alpha">
+<li>Nominaliąsias reikšmes galima tik suskaičiuoti: pasakyti, kiek kokių reikšmių yra.</li>
+<li>Ranginiais – galima suskaičiuoti, išdėstyti eilės tvarka ir palyginti, kuri didesnė/mažesnė.</li>
+<li>Su kiekybinių kintamųjų reikšmėmis – skaičiais – galima atlikti iš principo visus matematinius veiksmus (suskaičiuoti, palyginti, sudėti, atimti, padauginti, padalinti, apskaičiuoti vidurkį, …).</li>
+</ol>
+</div>
+<div id="apsimeteteliai" class="section level4 unnumbered">
+<h4>Kokie kintamieji atrodo kaip skaitiniai (kiekybiniai), bet iš tiesų yra kategoriniai?</h4>
+<ol style="list-style-type: lower-alpha">
+<li>Kategorijos, užkoduotos skaičiais, vis tiek yra kategorijos (tad joms skaičiuoti vidurkį nėra prasmės).</li>
+<li>Balais matuojami kintamieji iš tiesų yra ranginiai. Visgi, jei jie gali įgyti pakankamai daug reikšmių ir jų vidurkis turi prasmę (turbūt žinote, kas yra sesijos pažymių vidurkis), dažnai interpretuojami kaip skaitiniai. Visgi reikia prisiminti, kad pagal prigimtį – tai iš eilės išdėliotos kategorijos (rangai).</li>
+</ol>
+<br>
+
+<div class="exercise">
+<p><span id="exr:01-basics-1" class="exercise"><strong>Užduotis 1.1  </strong></span>Kuriam iš keturių tipų (nominalieji, ranginiai, diskretieji, tolydieji) priklauso šie duomenys:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Šokolado svoris (g);</li>
+<li>Šokolado skonis (neskanus, skanus, labai skanus);</li>
+<li>Šokolado pakuotės spalva;</li>
+<li>Šokolado lydymosi temperatūra (°C);</li>
+<li>Šokolado plytelių skaičius;</li>
+<li>Šokolado porėtumas (porėtas/neporėtas);</li>
+<li>Šokolado rūšis (juodasis, baltasis, pieniškas, mėtinis);</li>
+<li>Šokolade esančių riešutų skaičius.
+</div></li>
+</ol>
+</div>
+</div>
+<div id="duomenu-saugojimo-formos" class="section level3">
+<h3><span class="header-section-number">1.1.7</span> Duomenų saugojimo formos</h3>
+<p>Atliekant tyrimą svarbus dalykas yra nuspręsti, kokia forma rinksime ir saugosime duomenis. Mūsų pasirinkimas priklauso nuo tyrimo srities, sprendžiamo uždavinio ir duomenų sudėtingumo. Šio kurso metu daugiausiai dirbsime su dviem formomis – <strong>duomenų eilutėmis</strong> ir <strong>duomenų lentelėmis</strong> – tad siūlau skirti pakankamai daug laiko, kad tinkamai perprastumėte šias dvi struktūras.</p>
+</div>
+<div id="duomenu-eilutes" class="section level3">
+<h3><span class="header-section-number">1.1.8</span> Duomenų eilutės</h3>
+<p><strong>Duomenų eilutės</strong> – tai surinktų duomenų seka. Joje įrašomos vienõs užregistruotos tiriamųjų savybės (tarkim, apklaustųjų ūgio) reikšmės. Duomenų eilutės pavyzdys – išmatuoti kurso kolegų ūgiai (centimetrais): 180, 168, 171, 173, 185, 179, 164. Duomenų eilutę taip pat galima pavadinti statistiniu <strong>kintamuoju</strong>, nes reikšmės nėra fiksuotos, bet kinta. (PASTABA: vėliau susipažinsime su kompiuteriniu terminu „kintamasis“, tad atskirkite, kad tai panašūs, bet skirtingi dalykai).</p>
+<p>Analizei svarbu atpažinti tokias duomenų eilutes:</p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>statistinė eilutė</strong> – duomenys surašyti eilės tvarka, pagal tai, kada buvo surinkti ir užregistruoti;</li>
+<li><strong>variacinė eilutė</strong> – duomenys išrikiuoti didėjimo (arba nemažėjimo, jei yra vienodų reikšmių) tvarka.</li>
+</ol>
+</div>
+<div id="duomenu-lenteles" class="section level3">
+<h3><span class="header-section-number">1.1.9</span> Duomenų lentelės</h3>
+<p><strong>Duomenų lentelės</strong> – yra statistiniam tyrimui <em>svarbiausia</em> duomenų saugojimo forma. Ji yra standartizuota ir pritaikyta darbui statistinėmis programomis. Tvarkingos duomenų lentelės sudarymo principas: <strong>viena eilutė</strong> skirta <strong>vienam tiriamajam</strong>, <strong>vienas stulpelis</strong> – <strong>vienai savybei</strong> (kintamajam), o langeliuose – kiekvieno tiriamojo savybių reikšmės (žiūrėti pav. <a href="ivadas.html#fig:01-duomenu-lentele">1.7</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:01-duomenu-lentele"></span>
+<img src="fig/pic/01-duomenu-lentele.png" alt="Duomenų lentelės struktūra." width="939" />
+<p class="caption">
+Pav. 1.7: Duomenų lentelės struktūra.
+</p>
+</div>
+<p>Atkreipkite dėmesį, kad stulpelių pavadinimai nurodo tiriamųjų <em>savybes</em>. Be to, įprastai lentelė turi pavadinimą, kuris turėtų būti prasmingas ir apibendrinti lentelėje surinktus duomenis.</p>
+<p>Duomenų lentelė gali būti gaunama vienos ar kelių duomenų eilučių reikšmes surašius kaip stulpelius. Tik svarbu, kad pirma kiekvienos duomenų eilutės reikšmė būtų iš pirmo tiriamojo, antra – iš antro ir t.t. T. y., kad eilės tvarka atitiktų teisingai.</p>
+<p>Visgi, vykdant tyrimą, duomenis rekomenduoju rinkti <strong>iš karto</strong> <em>duomenų lentelės pavidalu</em>, papildomai pasidarant duomenų lentelės <em>aprašymą</em>. Aprašymas reikalingas tam, kad jūsų kolegos, vadovas arba jūs pats/pati po 6 mėnesių <em>tiksliai</em> žinotumėte, kokie duomenys šioje lentelėje. Aprašyme bent trumpai apibūdinkite tyrimą, jo tikslą, nurodykite duomenų rinkimo metodus ir prietaisus, pateikite <strong>kintamųjų aprašymą</strong>, kuriame nurodyti <strong>matavimo vienetai</strong>.</p>
+<br>
+<div class="ok">
+<p>
+<strong>Rekomendacija:</strong> surinktus duomenis iš karto surašykite į <strong>duomenų lentelės</strong> pavidalą + būtinai pasidarykite duomenų lentelės kintamųjų <strong>aprašymą</strong>.
+</p>
+</div>
+<hr />
+<p>Žinodami šitiek „matematinės-statistinės“ teorijos galime pereiti prie kitos dalies – „kompiuterinės“ teorijos ir duomenų analizės programa <em>R</em>.</p>
+</div>
+</div>
+<div id="r-ivadas" class="section level2">
+<h2><span class="header-section-number">1.2</span> Programos <em>R</em> pradmenys</h2>
+<p>Šiame poskyryje sužinosite, kas yra programa <em>R</em>, bei susipažinsite su darbo šia programa pradmenimis. Atkreipkite dėmesį į tai, kad taip pat skambantys terminai (pvz., objektas, kintamasis) statistikos ir kompiuterijos prasme gali turėti panašias, bet šiek tiek skirtingas reikšmes. Visgi tikiuosi, kad greit susigaudysite ir tai nekels problemų.</p>
+<div id="apie-r" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Apie programą <em>R</em></h3>
+<p><em>R</em> – tai duomenų analizei skirta kompiuterinė programa, turinti ir interaktyvios duomenų analizės, ir programavimo galimybes. Pagal savo paskirtį <em>R</em> orientuota į (statistinę) duomenų analizę ir duomenų vaizdinimą. Tačiau programos funkcionalumą smarkiai išplečia daugybė (virš 14000!) papildinių, dar vadinamų <strong>paketais</strong>, kurie leidžia spręsti įvairioms mokslo šakoms aktualius skaičiavimo, duomenų pertvarkymo, parengimo analizei bei vaizdinimo uždavinius, kurti automatizuotas ataskaitas ir pateikti jas įvairiomis formomis, pvz., internetinio tinklapio ar <em>Microsoft Word</em> formatu, rašyti mokslinius straipsnius, net knygas! Ši mokomoji medžiaga taip pat sukurta naudojantis <em>R</em>.</p>
+<p>Programa <em>R</em> – <a href="https://en.wikipedia.org/wiki/GNU_Project">GNU</a> projekto dalis, yra visiškai <em>nemokama</em> ir laisvai platinama. Jos vystymu rūpinasi R fondas (<em>The R Foundation</em>). Daugiau informacijos apie programą rasite tinklapyje <a href="www.r-project.org" class="uri">www.r-project.org</a>. Jei programos dar neturite, skyriuje „[Reikiamos programos]“ rašoma, kaip ją parsisiųsti ir įsidiegti į savo kompiuterį.</p>
+<div class="error">
+<p>
+<strong>Įspėjimas:</strong> programa <em>R</em> nėra pakaitalas jūsų smegenų darbui.
+</p>
+</div>
+</div>
+<div id="programos-rstudio-langai" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Programos <em>RStudio</em> langai</h3>
+<p>Programa <em>RStudio</em> yra patogesniam darbui su <em>R</em> skirta grafinė aplinka (angl. <em>graphical user interface</em>, GUI). Paveiksle <a href="ivadas.html#fig:01-rs-langai">1.8</a> pavaizduoti pagrindiniai programos langai.</p>
+<div class="figure" style="text-align: center"><span id="fig:01-rs-langai"></span>
+<img src="fig/pic/01-rs-langai.png" alt="Programos *RStudio* langai. " width="816" />
+<p class="caption">
+Pav. 1.8: Programos <em>RStudio</em> langai.
+</p>
+</div>
+<p>Jei programą atsidarote pirmą kartą, lango, pažymėto numeriu 2 (pav. <a href="ivadas.html#fig:01-rs-langai">1.8</a>) galite ir nematyti. Tai normalu. Kol kas visus tolimesnius pavyzdžius galite išsibandyti komandų lange (konsolėje), pažymėtame numeriu Nr. 1.</p>
+<br>
+
+<div class="exercise">
+<span id="exr:01-rs-1" class="exercise"><strong>Užduotis 1.2  </strong></span>Atsidarykite programą <em>RStudio</em>. Pažiūrėkite, ar matote visus keturis langus, vaizduojamus pav. <a href="ivadas.html#fig:01-rs-langai">1.8</a>. Jei trūksta lango Nr. 2, paspauskite <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> ir atsidarys <em>R</em> programos kodui rašyti ir išsaugoti skirtas langas („R Script“).
+</div>
+
+</div>
+<div id="pagrindiniai-r-kodo-sintakses-elementai" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Pagrindiniai <em>R</em> kodo sintaksės elementai</h3>
+<p>Turbūt pamenate lietuvių kalbos pamokas apie „sintaksę ir skyrybą“. Jų metu mokėtės rašyti sakinius, taisyklingai sujungti įvairias jų dalis, tokias kaip aplinkybės, bei taisyklingai jas atskirti tinkamais skyrybos ženklais. Kompiuterijoje taip pat yra terminas „sintaksė“, kuriuo nusakoma kompiuterinės kalbos rašymo taisyklių visuma.</p>
+<br>
+<div class="note">
+<p>
+<strong>Sintaksė</strong> (kompiuterijoje) yra kompiuterinės kalbos rašymo taisyklių visuma.
+</p>
+</div>
+<p><br></p>
+<div class="info">
+<p>
+Jūsų <strong>uždavinys</strong> analizuojant šį poskyrį – išmokti atpažinti kelis pagrindinius <em>R</em> programos kodo sintaksės elementus bei susipažinti su šioje mokomojoje medžiagoje naudojamu jų spalviniu žymėjimu.
+</p>
+</div>
+<div id="r-kodo-komentarai" class="section level4 unnumbered">
+<h4><em>R</em> kodo komentarai (#)</h4>
+<p>Vienas iš <em>R</em> kalbos elementų yra <strong>komentaras</strong>.
+Grotelių ženklas (<strong>#</strong>) šalia <em>R</em> komandų reiškia, kad tai <strong>komentaro</strong> pradžia. To, kas yra parašyta po grotelių, programa <em>R</em> neskaito. Šitokiu būdu galime rašyti pastabas patys sau:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Tai komentaras, kurio R neskaito</span></code></pre>
+<p>Komentaro ženklas galioja iki eilutės pabaigos, o rašant iš naujos eilutės – nebegalioja, tad norint tęsti komentarą kitoje eilutėje reikia groteles rašyti iš naujo:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Tai komentaras,</span>
+<span class="co"># kuris tęsiasi per</span>
+<span class="co"># kelias eilutes</span></code></pre>
+<p>Tam, kad būtų paprasčiau susigaudyti, modernios programos įprastai skirtingomis spalvomis paryškina įvairius <em>R</em> kodo elementus. Konkrečios spalvos ir paryškinimo būdas priklauso nuo naudojamos programos ir pasirinktų nustatymų. Šioje elektroninėje knygoje <strong>komentarai</strong> bus išryškinami tamsiai mėlyna spalva (kaip matote pavyzdyje virš šios pastraipos).</p>
+</div>
+<div id="rezultatu-zenklinimas" class="section level4 unnumbered">
+<h4>Rezultatų ženklinimas (##)</h4>
+<p>Šioje knygoje prieš <strong>rezultatus</strong>, kuriuos apskaičiuoja programa <em>R</em>, bus padedami du grotelių (t.y., komentaro) simboliai iš eilės (##) ir rezultatų tekstas bus nuspalvinamas pilkai:</p>
+<pre class="sourceCode r"><code class="sourceCode r">## tai rezultatas, kurį pateikė R</code></pre>
+<p>Pavyzdys: sudėjus 2 ir 3 (šią komandą parašome mes) atsakymas yra 5 (atsakymą apskaičiuoja ir parašo programa <em>R</em>):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">3</span>
+## [1] 5</code></pre>
+<p>Jei rezultatas bus apskaičiuojamas dirbant programa <em>R</em>, tai šių dviejų grotelių nepamatysite, nes dirbant programa ir taip aišku, kur jūsų parašyta komanda, o kur kompiuterio atsakymas.</p>
+
+<div class="exercise">
+<span id="exr:01-rs-4" class="exercise"><strong>Užduotis 1.3  </strong></span>R komandų lange (konsolėje) parašykite matematinį veiksmą <code class="sourceCode r"><span class="dv">3</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></code>. Koks rezultatas? Ką jis reiškia?
+</div>
+
+</div>
+<div id="elementu-eiles-numeriu-zymejimas" class="section level4 unnumbered">
+<h4>Elementų eilės numerių žymėjimas: <strong>[ ]</strong></h4>
+<p>Praeitame pavyzdyje pastebėjote, kad eilutės pradžioje laužtiniuose skliaustuose atsirado papildomas skaičius [1]. Jis nurodo tos eilutės pirmojo elemento (pavyzdyje jo reikšmė yra 5) numerį. Aišku, šiuo atveju užrašas [1] duoda mažai naudos. Tačiau yra labai patogus, kai atsakymo elementų yra daug ir jie netelpa į vieną eilutę. Tokiu atveju laužtiniuose skliaustuose nurodomas <em>kiekvienos eilutės <strong>pirmojo</strong> elemento</em> eilės numeris, pvz.:</p>
+<pre><code>##  [1]  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
+## [18]  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43
+## [35]  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60
+## [52]  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77
+## [69]  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94
+## [86]  95  96  97  98  99 100</code></pre>
+<p><br></p>
+<p>Pavyzdyje matome, kad elemento, kurio eilės numeris yra <code class="sourceCode r">[<span class="dv">69</span>]</code> reikšmė yra 78.</p>
+</div>
+<div id="r-funkcijos-ir-ju-argumentai" class="section level4 unnumbered">
+<h4><em>R</em> funkcijos ir jų argumentai</h4>
+<p>Viskas, kas vyksta programoje <em>R</em> – sudėtis, lango atidarymas, paveikslo nubraižymas, duomenų išsaugojimas, spalvos pakeitimas,– yra kokios nors funkcijos vykdymo rezultatas. <strong>Funkcijos</strong> – tai komandos, kurias duodame kompiuteriui. Jos rašomas kaip vienas žodis be tarpelių, kurio gale yra <em>paprastieji apvalūs skliausteliai</em>. Šioje knygoje jos bus paryškintos žydrai, kaip šiame pavyzdyje:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">r_funkcija</span>()</code></pre>
+<p><strong>Pastaba:</strong> jūsų kompiuteryje funkcija <code class="sourceCode r"><span class="kw">r_funkcija</span>()</code> neveiks, nes tai tik pavyzdys.</p>
+<p>Komandos skliausteliuose rašome taip vadinamus funkcijos <strong>argumentus</strong> (terminai „funkcijos“, „argumentai“ – visai tokie, kaip per matematikos paskaitą):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">r_funkcija</span>(argumento_reikšmė)</code></pre>
+<p>Argumentai gali turėti pavadinimus ir šie bus pabraukti (kol kas nesijaudinkite, jei neaišku, kas argumentai ir t.t. Dabar svarbiausia, kad surastumėte tik jų spalvinį žymėjimą):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">r_funkcija</span>(<span class="dt">argumento_pavadinimas =</span> argumento_reikšmė)</code></pre>
+<p>Pavyzdys, funkcija <code class="sourceCode r"><span class="kw">log</span>()</code>, kuri įprastai apskaičiuoja natūrinį logaritmą.
+Apskaičiuokime <span class="math inline">\(ln(100)\)</span>:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">100</span>)
+## [1] 4.60517</code></pre>
+<p>Funkcija <code class="sourceCode r"><span class="kw">log</span>()</code> turi argumentą <code class="sourceCode r">x</code>, tad galime užrašyti kitaip ir gauti tą patį rezultatą:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dt">x =</span> <span class="dv">100</span>)
+## [1] 4.60517</code></pre>
+<p>Iš tiesų ši funkcija turi kelis argumentus, ir kai argumentų daug, jų parašymas funkcijos viduje suteikia aiškumo:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">100</span>, <span class="dt">base =</span> <span class="dv">10</span>)
+## [1] 2</code></pre>
+<p>Turbūt supratote, kad buvo pakeistas logaritmo pagrindas („base“) į 10 ir apskaičiuota išraiška <span class="math inline">\(log_{10}(100)\)</span>.</p>
+<p>Jei norite daugiau sužinoti apie funkciją <code class="sourceCode r"><span class="kw">log</span>()</code>, komandų lange įrašykite <code class="sourceCode r">?log</code> (prieš funkcijos pavadinimą padėkite klaustuką) ir pagalbos bei dokumentacijos lange „Help“ (pav. <a href="ivadas.html#fig:01-rs-langai">1.8</a> langas Nr. 4) pamatysite aprašymą.</p>
+</div>
+<div id="kitu-elementu-spalvinis-zymejimas" class="section level4 unnumbered">
+<h4>Kitų elementų spalvinis žymėjimas</h4>
+<p>Skaičiai, simbolių eilutės, loginiai kintamieji bus išryškinami jiems būdingomis spalvomis:</p>
+<pre class="sourceCode r"><code class="sourceCode r">objekto_pavadinimas
+<span class="dv">335</span> <span class="co"># skaičius</span>
+<span class="st">&quot;simbolių eilutė (tekstas) rašoma kabutėse&quot;</span>
+<span class="ot">TRUE</span> <span class="co"># Loginė reikšmė</span></code></pre>
+</div>
+<div id="programos-kodas-blokais-ir-tekste" class="section level4 unnumbered">
+<h4>Programos kodas: blokais ir tekste</h4>
+<p>Didesni kodo pavyzdžiai bus pateikiami <strong>blokais</strong> su spalvomis išryškintais elementais, kaip matėte ankstesniuose pavyzdžiuose:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Sudedame 5 bei 4 ir ištraukiame šaknį.</span>
+<span class="co"># Atsakymas bus 3:</span>
+<span class="kw">sqrt</span>(<span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">4</span>)
+## [1] 3</code></pre>
+<p>Kodo pavydžiai gali būti pateikiami ir toje pačioje <strong>eilutėje su tekstu</strong>, pvz., <code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">4</span>)</code>. Žinokite, kad tai programos kodas (t. y., <em>R</em> komandos).</p>
+</div>
+</div>
+<div id="r-objektai" class="section level3">
+<h3><span class="header-section-number">1.2.4</span> R objektai</h3>
+<p>Viskas, kas yra <em>R</em> atmintyje – vadinama <strong>objektais</strong>. Tai funkcijos, duomenų struktūros, simboliai ir kita (pav., <a href="ivadas.html#fig:01-r-objektu-tipai">1.9</a>).
+<em>R</em> objektai dar vadinami <strong>kintamaisiais</strong> (kompiuterijos prasme, angl. <em>variable</em>).</p>
+<div class="figure" style="text-align: center"><span id="fig:01-r-objektu-tipai"></span>
+<img src="fig/pic/01-r-objektu-tipai.png" alt="Kai kurie programos *R* objektų tipai. * -- pagrindinės duomenų struktūros; ** -- sudėtinės duomenų struktūros, sudarytos iš pagrindinių." width="818" />
+<p class="caption">
+Pav. 1.9: Kai kurie programos <em>R</em> objektų tipai. * – pagrindinės duomenų struktūros; ** – sudėtinės duomenų struktūros, sudarytos iš pagrindinių.
+</p>
+</div>
+<p>Šiuo metu darbinėje <em>R</em> atmintyje esantys objektai išvardinti <strong>darbinės aplinkos</strong> lange „Environment“ (pav. <a href="ivadas.html#fig:01-rs-langai">1.8</a> langas Nr. 3).</p>
+<br>
+
+<div class="exercise">
+<span id="exr:01-rs-2" class="exercise"><strong>Užduotis 1.4  </strong></span>Į konsolę nukopijuokite šį programos kodą <code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">2</span></code> ir paspauskite klavišą „Enter“. Lange „Environment“ atsiras objektas, pavadinimu „x“.
+</div>
+
+<p><br></p>
+<p>Jei norime, kad <em>R</em>’as konsolėje išvardintų objektų, šiuo metu esančių jo atmintyje, pavadinimus, galime naudoti komandą <code>objects()</code>:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">objects</span>() <span class="co"># R&#39;as išvardija, kas jo darbinėje atmintyje</span></code></pre>
+<p>Dažnai naudojamas komandos <code>objects()</code> sinonimas yra komanda <code>ls()</code>, kuri daro visiškai tą patį:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ls</span>() <span class="co"># R&#39;as išvardija, kas jo atmintyje</span></code></pre>
+<p>Ši <em>R</em>’o atmintis įprastai vadinama <strong>darbine aplinka</strong> (angl. <em>workspace</em> arba <em>environment</em>). O išsaugota reikšmė gali būti ne tik vienas skaičius, bet ir žodžiai, vektoriai (skaičių ar kitokių reikšmių sekos), matricos, duomenų lentelės, netgi funkcijos.</p>
+
+<div class="note">
+<p>Kaip analizuojant <em>R</em> kodą atpažinti, kur įprastinė funkcija, o kur kitoks objektas?</p>
+Pradiniam susigaudymui galima sakyti, kad po <em>funkcijos</em> rašomi paprastieji apvalieji skliausteliai <strong>( )</strong>, pvz., <code class="sourceCode r"><span class="kw">sum</span>()</code>.
+Po kitokio objekto pavadinimo gali būti laužtiniai skliausteliai <strong>[ ]</strong>, <strong>[[ ]]</strong> arba nieko nebūti.
+</div>
+
+<div id="objektu-sukurimas" class="section level4 unnumbered">
+<h4>Objektų sukūrimas</h4>
+<!-- Viena iš bazinių sąvokų naudojant programą *R* yra **kintamasis**. Iš principo tai reiškia, kad tam tikrai reikšmei galima suteikti pavadinimą ir šiuo pavadinimu ją išsaugoti programos *R* atmintyje. O vėliau, parašius tą pavadinimą, skaičiavimuose panaudoti išsaugotą reikšmę. -->
+<p><em>R</em> objektai sukuriami naudojant <strong>priskyrimo operatorių</strong> <code class="sourceCode r">&lt;-</code> (įprastinis <em>R</em> naudotojo pasirinkimas) arba <code class="sourceCode r">=</code>. Rodyklė <code class="sourceCode r">&lt;-</code> susideda iš simbolių „mažiau“ ir „minus“ arba programoje <em>RStudio</em> įterpiama naudojant kombinaciją <kbd>Alt</kbd>+<kbd>-</kbd>. Kartais paspaudus šią kombinaciją įterpiamas operatorius <code class="sourceCode r">=</code>. Tokiu atveju programa mano, kad esamoje situacijoje šis operatorius yra tinkamesnis. Tai normalu.</p>
+<p>Sukurkime objektą <code>objekto_pavadinimas</code> kurio reikšmė būtų 4:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Skaitinės reikšmės priskyrimas</span>
+objekto_pavadinimas &lt;-<span class="st"> </span><span class="dv">4</span></code></pre>
+<p>Sakoma, kad objektui <code>objekto_pavadinimas</code> priskiriama reikšmė <code>4</code>.
+Jei vėliau parašome šio kintamojo pavadinimą, įprastai atspausdinama jo
+reikšmė (tai vadinama <strong>spausdinimu pagal nutylėjimą</strong>):</p>
+<pre class="sourceCode r"><code class="sourceCode r">objekto_pavadinimas
+## [1] 4</code></pre>
+<p>Taip pat tą patį rezultatą galime pasiekti naudodami komandą <code class="sourceCode r"><span class="kw">print</span>()</code>
+(šiuo atveju tai <strong>išreikštasis spausdinimas</strong>, nes parašome komandą):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(objekto_pavadinimas)
+## [1] 4</code></pre>
+<p><br>
+Vėliau šią reikšmę galima panaudoti atliekant tolimesnius veiksmus. Priskirkime reikšmę:</p>
+<pre class="sourceCode r"><code class="sourceCode r">nupirkom_kiausiniu &lt;-<span class="st"> </span><span class="dv">10</span></code></pre>
+<p>Atspausdinkime:</p>
+<pre class="sourceCode r"><code class="sourceCode r">nupirkom_kiausiniu
+## [1] 10</code></pre>
+<p>Sukurkime dar vieną objektą:</p>
+<pre class="sourceCode r"><code class="sourceCode r">suvalgem_kiausiniu &lt;-<span class="st"> </span><span class="dv">6</span></code></pre>
+<p>Atspausdinkime ir jį:</p>
+<pre class="sourceCode r"><code class="sourceCode r">suvalgem_kiausiniu
+## [1] 6</code></pre>
+<p>Su šiais dviem objektais galime atlikti matematinius veiksmus tarsi tai būtų skaičiai,
+kuriuos priskyrėme:</p>
+<pre class="sourceCode r"><code class="sourceCode r">liko_kiausiniu &lt;-<span class="st"> </span>nupirkom_kiausiniu <span class="op">-</span><span class="st"> </span>suvalgem_kiausiniu</code></pre>
+<p>Atspausdinkime rezultatą:</p>
+<pre class="sourceCode r"><code class="sourceCode r">liko_kiausiniu
+## [1] 4</code></pre>
+<p>Reikšmes priskyrimui taip pat galima naudojant ir <code>=</code> simbolį:</p>
+<pre class="sourceCode r"><code class="sourceCode r">po_papildymo =<span class="st"> </span>liko_kiausiniu <span class="op">+</span><span class="st"> </span><span class="dv">3</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">po_papildymo
+## [1] 7</code></pre>
+<br>
+
+<div class="exercise">
+<span id="exr:01-rs-6" class="exercise"><strong>Užduotis 1.5  </strong></span>Naudodami operatorių <code>&lt;-</code> sukurkite objektus pavadinimais „a“, „b“ ir „c“ kurių reikšmės būtų atitinkamai 96, -6, 0.01. Visus šiuos objektus sudėkite. Ar rezultatas toks, kokio tikėjotės?
+</div>
+
+</div>
+<div id="apie-objektu-pavadinimus" class="section level4 unnumbered">
+<h4>Apie objektų pavadinimus</h4>
+<p>Ar pamenat filmuką „Kung-fu Panda“? Jame kung-fu meistrai naudojo skirtingus kovos stilius: tigro, gervės, gyvatės… Panašiai ir rašant <em>R</em> kintamųjų pavadinimus, kuriuose siekiant aiškumo norima pavartoti kelis žodžius, naudojami įvairūs stiliai:</p>
+<ul>
+<li><em><strong>DvikuprioKupranugarioStilius</strong></em> (žodžiai rašomi iš didžiosios raidės, be tarpų);</li>
+<li><em><strong>taškuotojo.leopardo.stilius</strong></em> (žodžiai atskiriami taškais);</li>
+<li><em><strong>šliaužiančios_gyvatės_stilius</strong></em> (žodžiai atskiriami apatiniais brūkšniais).</li>
+</ul>
+<br>
+<div class="note">
+<p>
+<strong>Svarbu:</strong> programa <em>R</em> skirtingai reaguoja į didžiąsias ir mažąsias raides. Tad pavadinimai <code>T</code> ir <code>t</code> arba <code>c</code> ir <code>C</code>, arba <code>mano_mama</code>, <code>mano_Mama</code> ir <code>mano_MAMA</code> yra suprantami kaip skirtingi žodžiai.
+</p>
+</div>
+<p><br></p>
+<p>Skirtingas progrmų reagavimas į didžiąsias ir mažąsias raides angliškai vadinamas terminu „<em>case sensitive</em>“.
+<br></p>
+<p>Biostatistikos ir biometrijos pratybų metu dirbsime pagal „<strong>tidyverse</strong>“ sistemą. Todėl objektų pavadinimus rašysime pagal „<strong>tidyverse</strong>“ stiliaus gidą naudosime <em><strong>šliaužiančios_gyvatės_stilių</strong></em>:</p>
+<ol style="list-style-type: decimal">
+<li>pavadinime tik mažosios raidės, skaičiai ir apatinis brūkšnys <code>_</code>;</li>
+<li>pirmasis simbolis pavadinime – visada raidė.</li>
+</ol>
+<div class="ok">
+<p>
+Kaip kurti <em>R</em> objektų pavadinimus, kad vėliau nekiltų problemų?
+</p>
+<p>
+Naudotis „<strong>tidyverse</strong>“ stiliaus rekomendacijomis:
+</p>
+<ol style="list-style-type: decimal">
+<li>
+pirmasis simbolis pavadinime privalo būti mažoji raidė;
+</li>
+<li>
+kiti simboliai – tik mažosios raidės, skaičiai ir apatiniai brūkšniai <code>_</code>.
+</li>
+</ol>
+</div>
+<p><br></p>
+</div>
+</div>
+<div id="atomines-r-duomenu-klases" class="section level3">
+<h3><span class="header-section-number">1.2.5</span> Atominės <em>R</em> duomenų klasės</h3>
+<p>Programa <em>R</em> yra skirta darbui su duomenimis. Pagal prigimtį duomenys būna skirtingų tipų. Tad bazinius tipus dabar ir aptarsime. <em>R</em> objektai turi savybę pavadinimu <strong>klasė</strong> (angl. <em>class</em>). Techniškai objektų savybės vadnamos <strong>atributais</strong>, angl. <em>attributes</em>. Programoje <em>R</em> yra 6 atomines (t. y., pagrindinės, pačios smulkiausios, į smulkesnes neskaidomos) objektų klasės (lentelė <a href="ivadas.html#tab:atomines-klases">1.1</a>).</p>
+<table>
+<caption><span id="tab:atomines-klases">Lentelė 1.1: </span> Atominės <em>R</em> duomenų klasės.</caption>
+<colgroup>
+<col width="2%" />
+<col width="10%" />
+<col width="53%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nr.</th>
+<th>Klasė</th>
+<th>Pavadinimas</th>
+<th align="center">Užrašymo pavyzdys</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td><strong>character</strong></td>
+<td>Tekstas (ženklų eilutės). Dar vadinama „<strong>strings</strong>“.</td>
+<td align="center"><code class="sourceCode r"><span class="st">&quot;labas&quot;</span></code>, <code class="sourceCode r"><span class="st">&#39;A4&#39;</span></code></td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td><strong>numeric</strong></td>
+<td>Realieji skaičiai (dar vadinami „<strong>double</strong>“).</td>
+<td align="center"><code class="sourceCode r"><span class="dv">42</span></code>, <code class="sourceCode r"><span class="fl">-0.6</span></code>, <code class="sourceCode r"><span class="fl">1.2e2</span></code>, <code class="sourceCode r"><span class="fl">.3</span></code></td>
+</tr>
+<tr class="odd">
+<td>3.</td>
+<td><strong>integer</strong></td>
+<td>Sveikieji skaičiai.</td>
+<td align="center"><code class="sourceCode r">1L</code>, <code class="sourceCode r"><span class="op">-</span>65L</code>, <code class="sourceCode r">0L</code></td>
+</tr>
+<tr class="even">
+<td>4.</td>
+<td><strong>complex</strong></td>
+<td>Kompleksiniai skaičiai.</td>
+<td align="center"><code class="sourceCode r"><span class="dv">3</span> <span class="op">+</span><span class="st"> </span>4i</code>, <code class="sourceCode r"><span class="op">-</span>2i</code></td>
+</tr>
+<tr class="odd">
+<td>5.</td>
+<td><strong>logical</strong></td>
+<td>Loginės reikšmės.</td>
+<td align="center"><code class="sourceCode r"><span class="ot">TRUE</span></code>, <code class="sourceCode r"><span class="ot">FALSE</span></code></td>
+</tr>
+<tr class="even">
+<td>6.</td>
+<td><strong>raw</strong></td>
+<td>Baitų sekos. <em>(Plačiau nenagrinėsime, nes neaktualu).</em></td>
+<td align="center"> </td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div id="klase-character" class="section level4 unnumbered">
+<h4><strong>1. Klasė „character“ </strong></h4>
+<p>Tai <strong>tekstas</strong> – ženklų ir simbolių eilutės. Dar vadinamos terminu „<strong>strings</strong>“.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Klasės „character“ reikšmės sukuriamos tekstą
+ar simbolius parašius dvigubuose (<code>&quot;...&quot;</code>) ar viengubose (<code>'...'</code>)
+„kompiuteristų“ kabutėse (o ne pagražintose kabutėse, pvz., <code>„...“</code> arba <code>‘...’</code>).
+Pvz., <code class="sourceCode r"><span class="st">&quot;labas&quot;</span></code>,<code class="sourceCode r"><span class="st">&#39;A4&#39;</span></code>.</li>
+<li>Šio kurso metu šios klasės nenaudosime ir ją pasiversime į
+kategoriniams duomenims saugoti skirtą klasę „<em>factor</em>“ (faktorius).</li>
+</ol>
+</div>
+<div id="klase-numeric" class="section level4 unnumbered">
+<h4><strong>2. Klasė „numeric“ </strong></h4>
+<p>Tai <strong>realieji skaičiai</strong>, t. y., skaičiai su kableliu.
+Šios klasės objektai dar vadinami „<strong>double</strong>“ (nuo „double-precision floating-point format“).</p>
+<ol style="list-style-type: lower-alpha">
+<li>Skaičius, parašytas programoje <em>R</em> be papildomų nurodymų įprastai suprantamas kaip klasės „<em>numeric</em>“ atstovas, pvz., <code class="sourceCode r"><span class="dv">0</span></code>, <code class="sourceCode r"><span class="dv">42</span></code> ar <code class="sourceCode r"><span class="fl">-3.2</span></code>. Konsolėje parašykite <code class="sourceCode r"><span class="kw">class</span>(<span class="dv">42</span>)</code> ir įsitikinsite.</li>
+<li>Programoje <em>R</em> skaičiai rašomi tik su tašku, pvz., <code class="sourceCode r"><span class="fl">10.66</span></code>, o ne su kableliu <del><code class="sourceCode r"><span class="dv">10</span>,<span class="dv">66</span></code></del>. Taip yra todėl, kad tai, kas lietuviškai vadinama „kableliu“, angliškai užrašoma kaip taškas (žiūrėti pavyzdžius).</li>
+<li>Jei sveikoji skaičiaus dalis yra <code class="sourceCode r"><span class="dv">0</span></code>, tai jos galime nerašyti, pvz., <code class="sourceCode r"><span class="fl">.01</span></code> yra tas pats, kas <code class="sourceCode r"><span class="fl">0.01</span></code>, o <code class="sourceCode r"><span class="fl">-.2</span></code> atitinka <code class="sourceCode r"><span class="fl">-0.2</span></code>. Šitoks užrašymas gali būti naudojamas ne tik programoje <em>R</em>, bet ir mokslinėje literatūroje.</li>
+<li>Realieji skaičiai gali būti užrašomi ir inžinieriniu-moksliniu
+formatu naudojant simbolius <span class="math inline">\(e\)</span> arba <span class="math inline">\(E\)</span> (abiem atvejais ta pati reikšmė),
+kur <code class="sourceCode r"><span class="fl">1e4</span></code> reiškia <span class="math inline">\(1\cdot10^4\)</span>, o <code class="sourceCode r"><span class="fl">2.3e-2</span></code> reiškia <span class="math inline">\(2.3\cdot10^{-2}\)</span>.
+Pvz., <code class="sourceCode r"><span class="fl">1e2</span></code>, <code class="sourceCode r"><span class="fl">-1.2E-2</span></code>.</li>
+<li>Kad ir kokiu būdu būtų užrašyti, skaičiai programoje <em>RStudio</em> yra išryškinami ta pačia skaičiams būdinga spalva (ji priklauso nuo pasirinktos spalvų schemos): <code class="sourceCode r"><span class="fl">-1.2E-2</span></code>, <code class="sourceCode r"><span class="dv">2</span></code>, <code class="sourceCode r"><span class="fl">.06</span></code>. Tas pats galioja ir kitoms dviems atominėms skaičių klasėms. (Šiame vadovėlyje žaliai išryškinami tik sveikieji skaičiai, pvz., lentelėje <a href="ivadas.html#tab:atomines-klases">1.1</a>).</li>
+</ol>
+</div>
+<div id="klase-integer" class="section level4 unnumbered">
+<h4><strong>3. Klasė „integer“ </strong></h4>
+<p>Tai teigiami ir neigiami <strong>sveikieji skaičiai</strong> bei nulis.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Norint, kad skaičius būtų saugomas kaip sveikasis, jo pabaigoje parašome
+<strong>L</strong> didžiąją raidę, pvz., <code class="sourceCode r">4L</code>.</li>
+<li>Sveikasis skaičius kompiuterio atmintyje užima mažiau vietos nei realusis ar kompleksinis.</li>
+<li>Sveikasis skaičius įprastai gali būti ne mažesnis nei -2147483647 ir ne didesnis nei 2147483647.</li>
+</ol>
+</div>
+<div id="klase-complex" class="section level4 unnumbered">
+<h4><strong>4. Klasė „complex“ </strong></h4>
+<p>Tai <strong>kompleksiniai skaičiai.</strong> Sukuriami prie menamosios
+dalies skaitmenų prirašius <strong>i</strong> mažąją, pvz., <code class="sourceCode r"><span class="dv">32</span> <span class="op">-</span><span class="st"> </span>1i</code> arba <code class="sourceCode r">3i</code>. Šio kurso metu kompleksinių skaičių nenaudosime.</p>
+</div>
+<div id="klase-logical" class="section level4 unnumbered">
+<h4><strong>5. Klasė „logical“ </strong></h4>
+<p>Tai <strong>loginės reikšmės</strong> <code class="sourceCode r"><span class="ot">TRUE</span></code> (taip, tiesa) ir
+<code class="sourceCode r"><span class="ot">FALSE</span></code> (ne, netiesa).</p>
+<ol style="list-style-type: lower-alpha">
+<li>Atsiranda darant palyginimą arba sąlygos tikrinimą,
+pvz., <code class="sourceCode r"><span class="dv">1</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">-1</span></code> (lyginame 1 ir -1) arba <code class="sourceCode r"><span class="kw">is.numeric</span>(<span class="dv">24</span>)</code> (tikriname,
+ar 24 priklauso klasei „numeric“).</li>
+<li>Loginės reikšmės gali būti užrašomos ir
+sutrumpintai (<code class="sourceCode r">T</code> arba <code class="sourceCode r">F</code>), bet visą laiką <em>tik didžiosiomis raidėmis</em>.</li>
+</ol>
+</div>
+<div id="klase-raw" class="section level4 unnumbered">
+<h4><strong>6. Klasė „raw“ </strong></h4>
+<p>Plačiau nenagrinėsime – ši klasė mums nebus reikalinga.</p>
+<br>
+<div class="ok">
+<p>
+Šio kurso metu mums reikalingiausios atominės duomenų klasės: <strong>numeric</strong>, <strong>integer</strong> bei sudėtingesnė klasė <strong>factor</strong>, nes jos skirtos statistiniams duomenis.
+</p>
+</div>
+</div>
+</div>
+<div id="r-duomenu-strukturos" class="section level3">
+<h3><span class="header-section-number">1.2.6</span> <em>R</em> duomenų struktūros</h3>
+<p>Terminas „duomenų struktūra“ nurodo formą, kuria saugomi duomenys. Jei duomenis prilygintume mėgintuvėliams, tai duomenų struktūros būtų tam tikro tipo dėžutės ir laikikliai, skirti tam tikru būdu mėgintuvėlius išdėlioti ir saugoti. Programoje <em>R</em> yra 4 pagrindinės duomenų struktūros:</p>
+<ol style="list-style-type: decimal">
+<li><strong>atominis vektorius</strong> (<em>vector</em>) – tai tos pačios klasės duomenų reikšmių seka. Atominius vektorius sudaro tik atominių klasių duomenys. Ši duomenų struktūra atitinka „duomenų eilutę“ (statistinę ar variacinę) arba kintamąjį statistikos prasme.</li>
+<li><strong>matrica</strong> (<em>matrix</em>) <!-- ir masyvas (*array*) --> – programoje <em>R</em>, matrica yra vieno duomenų tipo (pvz., sveikųjų ar realiųjų skaičių, loginių, tekstinių) elementų, išdėliotų į fiksuotą eilučių ir stulpelių skaičių, rinkinys. T. y., vektoriaus reikšmės išdėliotos lentelės pavidalu eilutėmis ir stulpeliais. Skirtos tiesinės algebros uždaviniams spręsti, principinių komponentų, klasterinei ir panašioms analizėms.</li>
+<li><strong>duomenų lentelė</strong> (<em>data.frame</em>) – tai <em>R</em> dvimatė duomenų struktūra (lentelė), kurios kiekviename stulpelyje gali būti skirtingo tipo duomenys, tačiau visi <em>stulpeliai</em> privalo būti <em>vienodo ilgio</em>. Tai pagrindinė duomenų struktūra, su kuria dirbsime šio kurso metu.</li>
+<li><strong>sąrašas</strong> (<em>list</em>) – tai tokia duomenų struktūra, kurios kiekvienas elementas gali turėti skirtingo tipo duomenis, kurių ilgiai skirtingi. Kiekvienas sąrašo elementas yra tarsi atskiras konteineris, kuris gali talpinti skirtingas duomenų struktūras (vektorius, matricas, duomenų lenteles ar net kitus sąrašus). Tokiu būdu dažnai pateikiami statistinės analizės rezultatai.</li>
+</ol>
+<p>Dar viena mūsų kursui svarbi duomenų struktūra yra sudėtinė:</p>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>faktorius</strong> (<em>factor</em>) – tai specialaus tipo vektorius, skirtas saugoti kategorinių kintamųjų reikšmes. Šios struktūros ypatybė ta, kad jos reikšmės kompiuterio atmintyje saugomos kaip sveikieji skaičiai (t.y., kategorijos kodai), o kategorijų pavadinimai (vadinami „lygiais“, angl. <em>levels</em>) – kaip tekstas. Tokiu būdų kategoriniai kintamieji kompiuterio atmintyje užima mažiau vietos nei tekstas.</li>
+</ol>
+</div>
+<div id="r-vektoriaus-kurimas" class="section level3">
+<h3><span class="header-section-number">1.2.7</span> <em>R</em> vektoriaus kūrimas</h3>
+<p><em>R</em> vektorius statistikoje atitinka duomenų eilutę. Kelios reikšmės į vektorių (t. y., į seką) sujungiamos naudojant komandą <code class="sourceCode r"><span class="kw">c</span>()</code> (<strong>c</strong> nuo žodžio <em><strong>c</strong>ombine</em> arba <em><strong>c</strong>oncatenate</em>). Reikšmės rašomos komandos skliausteliuose <code class="sourceCode r">()</code> ir atskirtus kableliais <code class="sourceCode r">,</code>:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="dv">6</span>, <span class="dv">23</span>, <span class="dv">33</span>, <span class="dv">19</span>)
+## [1]  6 23 33 19</code></pre>
+<p>Jei tuos pačius skaičius parašysime <em>R</em> konsolėje be komandos <code class="sourceCode r"><span class="kw">c</span>()</code>, <em>R</em> pamanys, kad tai atskiri niekaip nesusiję elementai, nesupras, ką su jais norime daryti, ir išdidžiai pareikš „tai klaida!“ (<code>Error</code>):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">6</span>, <span class="dv">23</span>, <span class="dv">33</span>, <span class="dv">19</span>
+## Error: &lt;text&gt;:1:2: unexpected &#39;,&#39;
+## 1: 6,
+##      ^</code></pre>
+<p>Komanda <code class="sourceCode r"><span class="kw">c</span>()</code> į vektorių gali sujungti ne tik skaičius, bet ir kitokios klasės elementus:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="st">&quot;Man&quot;</span>, <span class="st">&quot;puikiai&quot;</span>, <span class="st">&quot;sekasi&quot;</span>, <span class="st">&quot;.&quot;</span>)
+## [1] &quot;Man&quot;     &quot;puikiai&quot; &quot;sekasi&quot;  &quot;.&quot;</code></pre>
+<p>Ar loginės reikšmės (angliškai vadinamos „logical“ arba „boolean“)</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">TRUE</span>)
+## [1]  TRUE FALSE FALSE  TRUE  TRUE</code></pre>
+<p>Vektorių galime išsaugoti kaip objektą:</p>
+<pre class="sourceCode r"><code class="sourceCode r">vektorius &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>, <span class="dv">23</span>, <span class="dv">33</span>, <span class="dv">19</span>)</code></pre>
+<p>Tada jį atspausdinti:</p>
+<pre class="sourceCode r"><code class="sourceCode r">vektorius
+## [1]  6 23 33 19</code></pre>
+<p>Naudodami laužtinius skliaustus galime pasirinkti tam tikrus elementus, pvz., antrą:</p>
+<pre class="sourceCode r"><code class="sourceCode r">vektorius[<span class="dv">2</span>]
+## [1] 23</code></pre>
+<p>Arba antrą ir ketvirtą:</p>
+<pre class="sourceCode r"><code class="sourceCode r">vektorius[<span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>)]
+## [1] 23 19</code></pre>
+<p>Daugelis operacijų programoje <em>R</em> yra <strong>vektorizuotos</strong>, t. y., atliekamos kiekvienam elementui atskirai:</p>
+<pre class="sourceCode r"><code class="sourceCode r">vektorius <span class="op">+</span><span class="st"> </span><span class="dv">100</span>
+## [1] 106 123 133 119</code></pre>
+<p>Galime atlikti veiksmus su visais vektoriaus nariais iš karto:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(vektorius)
+## [1] 81</code></pre>
+<p>Daugiau apie matematinius veiksmus rašoma kitame poskyryje.</p>
+</div>
+<div id="r-kaip-kalkuliatorius" class="section level3">
+<h3><span class="header-section-number">1.2.8</span> <em>R</em> kaip kalkuliatorius: operatoriai ir komandos</h3>
+<p>Programoje <em>R</em> matematinius (ir kitokius) veiksmus atlieka simboliai, vadinami <strong>operatoriais</strong> (pvz., lentelėje <a href="ivadas.html#tab:math-1">1.2</a>), arba komandos, vadinamos <strong>funkcijomis</strong> (pvz., lentelėse <a href="ivadas.html#tab:math-2">1.4</a>, <a href="ivadas.html#tab:math-3">1.5</a>). Taip pat galima panaudoti ir konstantas, tokios kaip skaičius <span class="math inline">\(\pi\)</span> (lentelė <a href="ivadas.html#tab:constants-1">1.3</a>).</p>
+<br>
+<div class="note">
+<p>
+<em>R</em> operatoriai – tai funkcijos, užrašomos ne žodžiais, o specialiaisiais simboliais, tokiais kaip <code>+</code>, <code>&lt;-</code>, <code>==</code> ar <code>%&gt;%</code>.
+</p>
+</div>
+<p><br></p>
+<table>
+<caption><span id="tab:math-1">Lentelė 1.2: </span> Matematinius veiksmus atliekantys <em>R</em> operatoriai</caption>
+<colgroup>
+<col width="17%" />
+<col width="28%" />
+<col width="20%" />
+<col width="32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Simbolis (operatorius)</th>
+<th align="center">Atliekamas veiksmas (operacija)</th>
+<th align="center">Pavyzdys</th>
+<th align="center">Pavyzdžio atsakymas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">+</td>
+<td align="center">Sudėtis</td>
+<td align="center"><code class="sourceCode r"><span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">8</span></code></td>
+<td align="center">13</td>
+</tr>
+<tr class="even">
+<td align="center">-</td>
+<td align="center">Atimtis</td>
+<td align="center"><code class="sourceCode r"><span class="dv">5</span> <span class="op">-</span><span class="st"> </span><span class="dv">7</span></code></td>
+<td align="center">-2</td>
+</tr>
+<tr class="odd">
+<td align="center">*</td>
+<td align="center">Daugyba</td>
+<td align="center"><code class="sourceCode r"><span class="dv">3</span> <span class="op">*</span><span class="st"> </span><span class="dv">4</span></code></td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">/</td>
+<td align="center">Dalyba</td>
+<td align="center"><code class="sourceCode r"><span class="dv">6</span> <span class="op">/</span><span class="st"> </span><span class="dv">3</span></code></td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">^</td>
+<td align="center">Kėlimas laipsniu</td>
+<td align="center"><code class="sourceCode r"><span class="dv">3</span><span class="op">^</span><span class="dv">2</span></code></td>
+<td align="center">9</td>
+</tr>
+<tr class="even">
+<td align="center">**</td>
+<td align="center">Kėlimas laipsniu</td>
+<td align="center"><code class="sourceCode r"><span class="dv">3</span><span class="op">**</span><span class="dv">2</span></code></td>
+<td align="center">9</td>
+</tr>
+<tr class="odd">
+<td align="center">%/%</td>
+<td align="center">Sveikoji dalis (po dalybos)</td>
+<td align="center"><code class="sourceCode r"><span class="dv">7</span> <span class="op">%/%</span><span class="st"> </span><span class="dv">3</span></code></td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">%%</td>
+<td align="center">Liekana (po dalybos)</td>
+<td align="center"><code class="sourceCode r"><span class="dv">7</span> <span class="op">%%</span><span class="st"> </span><span class="dv">3</span></code></td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>Veiksmai atliekami eilės tvarka, panašiai, kaip matematikoje:</p>
+<ul>
+<li>pirma veiksmai skliausteliuose;</li>
+<li>tada kėlimas laipsniu;</li>
+<li>tada daugyba, dalyba;</li>
+<li>tada sudėtis, atimtis.</li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">3</span><span class="op">^</span><span class="dv">2</span>          <span class="co"># 2 * 9</span>
+## [1] 18</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">(<span class="dv">3</span> <span class="op">+</span><span class="st"> </span><span class="dv">6</span>)<span class="op">^</span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span><span class="dv">9</span><span class="op">/</span><span class="dv">3</span>  <span class="co"># 9^2 - 3</span>
+## [1] 78</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">21</span> <span class="op">%/%</span><span class="st"> </span><span class="dv">2</span> <span class="op">^</span><span class="st"> </span><span class="dv">2</span>     <span class="co"># 21 %/% 4</span>
+## [1] 5</code></pre>
+<p>Jei nesate tikri, kokia tvarka bus atlikti veiksmai – naudokite <strong>papildomus skliaustus</strong>. Tada tikrai bus aišku:</p>
+<pre class="sourceCode r"><code class="sourceCode r">(<span class="dv">5</span> <span class="op">%/%</span><span class="st"> </span><span class="dv">2</span>) <span class="op">^</span><span class="st"> </span><span class="dv">2</span>
+## [1] 4</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span> <span class="op">%/%</span><span class="st"> </span>(<span class="dv">2</span> <span class="op">^</span><span class="st"> </span><span class="dv">2</span>)
+## [1] 1</code></pre>
+<div class="note">
+<p>
+Jei yra pradžios skliaustai <code>(</code>, būtinai turi būti ir pabaigos skliaustai <code>)</code>.
+</p>
+</div>
+<p><br></p>
+<table>
+<caption><span id="tab:constants-1">Lentelė 1.3: </span> Matematinės konstantos</caption>
+<thead>
+<tr class="header">
+<th align="center">Konstanta</th>
+<th align="center">Reikšmė</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">pi</td>
+<td align="center">skaičius <span class="math inline">\(\pi = 3.1415926...\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">exp(1)</td>
+<td align="center">skaičius <span class="math inline">\(e = 2.71828...\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<table>
+<caption><span id="tab:math-2">Lentelė 1.4: </span> <em>R</em> komandos, atliekančios dažnas matematines operacijas</caption>
+<colgroup>
+<col width="9%" />
+<col width="83%" />
+<col width="3%" />
+<col width="3%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Funkcija (komanda)</th>
+<th>Atliekamas veiksmas (operacija)</th>
+<th>Pavyzdys</th>
+<th>Pavyzdžio atsakymas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">sqrt()</td>
+<td>Kvadratinė šaknis</td>
+<td><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">4</span>)</code></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td align="center">abs()</td>
+<td>Modulis (absoliučioji vertė)</td>
+<td><code class="sourceCode r"><span class="kw">abs</span>(<span class="op">-</span><span class="dv">2</span>)</code></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td align="center">sin(), cos(), tan()</td>
+<td>Trigonometrinės funkcijos (skliaustuose radianai).</td>
+<td><code class="sourceCode r"><span class="kw">sin</span>(pi<span class="op">/</span><span class="dv">6</span>)</code></td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td align="center">exp()</td>
+<td>Eksponentė (<span class="math inline">\(e^x\)</span>)</td>
+<td><code class="sourceCode r"><span class="kw">exp</span>(<span class="dv">0</span>)</code></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td align="center">log(), log2(), log10()</td>
+<td>Natūrinis (<span class="math inline">\(\ln{x}\)</span>), dvejetainis (<span class="math inline">\(\log_2{x}\)</span>) ir dešimtainis (<span class="math inline">\(\lg{x}\)</span>) logaritmai.</td>
+<td><code class="sourceCode r"><span class="kw">log10</span>(<span class="dv">100</span>)</code></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td align="center">factorial()</td>
+<td>Faktorialas (<span class="math inline">\(4! = 4\cdot3\cdot2\cdot1\)</span>)</td>
+<td><code class="sourceCode r"><span class="kw">factorial</span>(<span class="dv">4</span>)</code></td>
+<td>24</td>
+</tr>
+<tr class="odd">
+<td align="center">choose()</td>
+<td>Binominis koeficientas <span class="math inline">\(C^k_n\)</span>. Taip pat žymimas <span class="math inline">\(\binom{n}{k} = {n! \over k!(n-k)!}\)</span>.</td>
+<td><code class="sourceCode r"><span class="kw">choose</span>(<span class="dt">n =</span> <span class="dv">5</span>, <span class="dt">k =</span> <span class="dv">2</span>)</code></td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<!-- gamma() | Oilerio (Euler’s) gama funkcija -->
+<p><br></p>
+<table style="width:100%;">
+<caption><span id="tab:math-3">Lentelė 1.5: </span> <em>R</em> komandos, atliekančios apvalinimą. ¹Apvalinimas iki artimiausio sveikojo skaičiaus.</caption>
+<colgroup>
+<col width="9%" />
+<col width="79%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Funkcija (komanda)</th>
+<th>Atliekamas veiksmas (operacija)</th>
+<th align="center">Pavyzdys</th>
+<th align="center">Pavyzdžio atsakymas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">round()</td>
+<td><strong>Įprastinis</strong> apvalinimas (iki n skaičių po kablelio)</td>
+<td align="center"><code class="sourceCode r"><span class="kw">round</span>(<span class="fl">8.275</span>, <span class="dt">digits =</span> <span class="dv">2</span>)</code></td>
+<td align="center">8.28</td>
+</tr>
+<tr class="even">
+<td align="center"> </td>
+<td> </td>
+<td align="center"><code class="sourceCode r"><span class="kw">round</span>(<span class="op">-</span><span class="fl">8.275</span>, <span class="dt">digits =</span> <span class="dv">2</span>)</code></td>
+<td align="center">-8.28</td>
+</tr>
+<tr class="odd">
+<td align="center">signif()</td>
+<td><strong>Įprastinis</strong> apvalinimas (iki n reikšmingų skaičių)</td>
+<td align="center"><code class="sourceCode r"><span class="kw">signif</span>(<span class="fl">8.275</span>, <span class="dt">digits =</span> <span class="dv">2</span>)</code></td>
+<td align="center">8.3</td>
+</tr>
+<tr class="even">
+<td align="center"> </td>
+<td> </td>
+<td align="center"><code class="sourceCode r"><span class="kw">signif</span>(<span class="fl">0.0275</span>, <span class="dt">digits =</span> <span class="dv">2</span>)</code></td>
+<td align="center">0.028</td>
+</tr>
+<tr class="odd">
+<td align="center">ceiling()</td>
+<td>Apvalinimas¹ <strong>į didesnę pusę</strong></td>
+<td align="center"><code class="sourceCode r"><span class="kw">ceiling</span>(<span class="fl">8.275</span>)</code></td>
+<td align="center">9</td>
+</tr>
+<tr class="even">
+<td align="center"> </td>
+<td> </td>
+<td align="center"><code class="sourceCode r"><span class="kw">ceiling</span>(<span class="op">-</span><span class="fl">8.275</span>)</code></td>
+<td align="center">-8</td>
+</tr>
+<tr class="odd">
+<td align="center">floor()</td>
+<td>Apvalinimas¹ <strong>į mažesnę pusę</strong></td>
+<td align="center"><code class="sourceCode r"><span class="kw">floor</span>(<span class="fl">8.975</span>)</code></td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center"> </td>
+<td> </td>
+<td align="center"><code class="sourceCode r"><span class="kw">floor</span>(<span class="op">-</span><span class="fl">8.975</span>)</code></td>
+<td align="center">-9</td>
+</tr>
+<tr class="odd">
+<td align="center">trunc()</td>
+<td>Apvalinimas¹ <strong>į nulio pusę</strong></td>
+<td align="center"><code class="sourceCode r"><span class="kw">trunc</span>(<span class="fl">9.99</span>)</code></td>
+<td align="center">9</td>
+</tr>
+<tr class="even">
+<td align="center"> </td>
+<td> </td>
+<td align="center"><code class="sourceCode r"><span class="kw">trunc</span>(<span class="op">-</span><span class="fl">9.99</span>)</code></td>
+<td align="center">-9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="specialieji-simboliai" class="section level3">
+<h3><span class="header-section-number">1.2.9</span> Specialieji simboliai</h3>
+<p>Tam tikri žodžiai <em>R</em> kalboje yra specialieji simboliai, turintys tam tikrą paskirtį (žr. lentelėje <a href="ivadas.html#tab:spec-symbols">1.6</a>). Parašius šiuos simbolius,
+programa juos atpažįsta ir įprastai netgi nudažo kita spalva.</p>
+<table>
+<caption><span id="tab:spec-symbols">Lentelė 1.6: </span> Specialieji simboliai.</caption>
+<colgroup>
+<col width="17%" />
+<col width="43%" />
+<col width="38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Simbolis</th>
+<th align="center">Atliekamas palyginimas</th>
+<th align="center">Rezultatas <em>R</em> komandų lange</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><code class="sourceCode r"><span class="ot">NA</span></code></td>
+<td align="center">trūkstama reikšmė
+(angl., <em>not available</em>)</td>
+<td align="center">NA</td>
+</tr>
+<tr class="even">
+<td align="center"><code class="sourceCode r"><span class="ot">NaN</span></code></td>
+<td align="center">negalima skaitinė reikšmė
+(angl., <em>NaN – not a numeric</em>)</td>
+<td align="center">NaN</td>
+</tr>
+<tr class="odd">
+<td align="center"><code class="sourceCode r"><span class="ot">Inf</span></code></td>
+<td align="center">begalybė</td>
+<td align="center">Inf</td>
+</tr>
+<tr class="even">
+<td align="center"><code class="sourceCode r"><span class="op">-</span><span class="ot">Inf</span></code></td>
+<td align="center">neigiama begalybė</td>
+<td align="center">-Inf</td>
+</tr>
+<tr class="odd">
+<td align="center"><code class="sourceCode r"><span class="ot">NULL</span></code></td>
+<td align="center">tuščias narys; ištrinti</td>
+<td align="center">NULL</td>
+</tr>
+<tr class="even">
+<td align="center"><code class="sourceCode r"><span class="ot">FALSE</span></code></td>
+<td align="center">loginė reikšmė „netiesa“</td>
+<td align="center">FALSE</td>
+</tr>
+<tr class="odd">
+<td align="center"><code class="sourceCode r">F</code></td>
+<td align="center">loginė reikšmė „netiesa“
+(sutrumpintai)</td>
+<td align="center"><strong>FALSE</strong></td>
+</tr>
+<tr class="even">
+<td align="center"><code class="sourceCode r"><span class="ot">TRUE</span></code></td>
+<td align="center">loginė reikšmė „tiesa“</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center"><code class="sourceCode r">T</code></td>
+<td align="center">loginė reikšmė „tiesa“
+(sutrumpintai)</td>
+<td align="center"><strong>TRUE</strong></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>Pavyzdžiai, kaip gaunami arba užrašomi specialieji simboliai:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">0</span><span class="op">/</span><span class="dv">0</span> <span class="co"># ne skaičius (NaN - not a numeric)</span>
+## [1] NaN</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="ot">FALSE</span> <span class="co"># loginė reikšmė „netiesa“ </span>
+## [1] FALSE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">F <span class="co"># loginė reikšmė „netiesa“ (sutrumpintai)</span>
+## [1] FALSE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">TRUE<span class="co"># loginė reikšmė „tiesa“</span>
+## [1] TRUE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">T <span class="co"># loginė reikšmė „tiesa“ (sutrumpintai)</span>
+## [1] TRUE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">0</span>) <span class="co"># neapibrėžtumas</span>
+## [1] -Inf</code></pre>
+</div>
+<div id="skaiciu-seku-kurimas" class="section level3">
+<h3><span class="header-section-number">1.2.10</span> Skaičių sekų kūrimas</h3>
+<p>Skaičių sekos gali būti sukuriamos keliais būdais:</p>
+<ul>
+<li>naudojant vieno dvitašio operatorių <code class="sourceCode r"><span class="op">:</span></code>. Pvz.:
+<ul>
+<li><code class="sourceCode r"><span class="dv">3</span><span class="op">:</span><span class="dv">21</span></code> sukuria seką nuo 3 iki 21 kas 1;</li>
+</ul></li>
+<li>naudojant funkciją <code class="sourceCode r"><span class="kw">seq</span>()</code> (nuo angliško žodžio <em>sequence</em>). Pvz.:
+<ul>
+<li><code class="sourceCode r"><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">21</span>, <span class="dt">by =</span> <span class="dv">5</span>)</code> sukuria seką nuo 1 iki 21 kas 5;</li>
+<li><code class="sourceCode r"><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">21</span>, <span class="dt">length.out =</span> <span class="dv">4</span>)</code> sukuria seką nuo 1 iki 21, kurią sudaro 4 elementai;</li>
+<li><code class="sourceCode r"><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">21</span>, <span class="dt">along.with =</span> <span class="dv">2</span><span class="op">:</span><span class="dv">9</span>)</code> sukuria seką nuo 1 iki 21, kurią sudaro tiek pat elementų, kaip ir seką <code class="sourceCode r"><span class="dv">2</span><span class="op">:</span><span class="dv">9</span></code>.</li>
+</ul></li>
+<li>sekų, kurių nariai skirstosi pagal įvairius statistinius dėsnius, kūrimas. Pvz.:
+<ul>
+<li><code class="sourceCode r"><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dt">mean =</span> <span class="dv">1</span>, <span class="dt">sd =</span> <span class="fl">0.2</span>)</code> sukurs atsitiktinę seką iš 10 skaičių, pasiskirsčiusių pagal normalųjį skirstinį, kurio vidurkis 1, o standartinis nuokrypis – 0,2;</li>
+<li><code class="sourceCode r"><span class="kw">rpois</span>(<span class="dv">10</span>, <span class="dt">lambda =</span> <span class="dv">3</span>)</code> sukurs atsitiktinę seką iš 10 skaičių, pasiskirsčiusių pagal Puasono (<em>Poisson</em>) skirstinį, kurio parametras <span class="math inline">\(\lambda = 3\)</span>;</li>
+<li>(plačiau apie šiuos dėsnius mokysimės būsimų paskaitų ir pratybų metu).</li>
+</ul></li>
+</ul>
+<!-- Footer -->
+<footer>
+<p>Tinklapio turiniui taikoma tarptautinė <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<b>Creative Commons 4.0</b> (Priskyrimas – Nekomercinis platinimas –
+Analogiškas platinimas) <b>licencija</b></a>.</p>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"  target="_blank">
+<img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="" title="" border="0"></a>
+</center>
+<br>
+</footer>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="labai-svarbu.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="duomenu-isikelimas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "sepia",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "static"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
