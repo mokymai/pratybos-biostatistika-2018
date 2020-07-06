@@ -1,1 +1,1 @@
-# pratybos-biostatistika_2018
+# biostatistika-2018
